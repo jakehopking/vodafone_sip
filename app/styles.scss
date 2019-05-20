@@ -1,4 +1,7 @@
-$vodafone: red;
+@import "./scss/settings/colours";
+
+// Test global colours import
+$vodafone: $color-red;
 
 body {
   background: $vodafone;
