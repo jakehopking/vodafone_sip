@@ -4,6 +4,7 @@
 @import "./scss/settings/fonts";
 @import "./scss/settings/font-sizes";
 @import "./scss/settings/line-heights";
+@import "./scss/settings/springs";
 
 // Tools
 @import "./scss/tools/clearfix";
@@ -11,7 +12,12 @@
 // Base
 @import "./scss/base/body";
 
+// Objects
+@import "./scss/objects/springs";
+
+
 // Components
+@import "./scss/components/header";
 @import "./scss/components/navigation";
 
 
