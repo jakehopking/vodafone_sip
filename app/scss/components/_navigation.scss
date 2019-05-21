@@ -1,0 +1,633 @@
+.navigation {
+  background-color: $color-abbey;
+  font-size: 32px;
+  position: relative;
+
+  &__link--active &__accessibility {
+    display: inline-block;
+  }
+
+  &__accessibility {
+    display: none;
+  }
+
+  &--primary {
+    background-color: $color-white;
+    border-bottom: 1px solid hex-to-rgba($color-dove-gray, 0.5);
+    background-clip: padding-box;
+  }
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &--transparent {
+    background: none;
+  }
+
+  &__list {
+    @include clearfix;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  &__icon {
+    &--active {
+      background-color: $color-red;
+    }
+  }
+
+  &__spring {
+    display: block;
+    max-height: 72px;
+
+    &--primary {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 75px;
+    }
+  }
+
+  &__content {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &--secondary {
+    background-color: hex-to-rgba($color-white, 0.9);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: -200%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: all 0.1s ease 0.15s;
+  }
+
+  &--secondary-sub {
+    background-color: hex-to-rgba($color-white, 0.95);
+    position: absolute;
+    left: 0;
+    top: -200%;
+    opacity: 0;
+    z-index: -2;
+    transition: all 0.3s ease 0.35s;
+  }
+
+  &--tertiary {
+    background-color: transparent;
+    display: none;
+    position: absolute;
+    right: 0;
+    text-align: left;
+
+    &--user {
+      background-color: hex-to-rgba($color-white, 0.96);
+      width: 300px;
+    }
+  }
+
+  &--display {
+    display: block;
+    top: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease 0.3s;
+  }
+
+  &__item {
+    float: left;
+    font-family: $font-family-vodafone-light;
+    font-size: 24px;
+
+    &--right {
+      float: right;
+    }
+
+    &--parent {
+      position: relative;
+    }
+
+    &--secondary-sub {
+      float: none;
+      white-space: nowrap;
+    }
+
+    &--tertiary {
+      width: 100%;
+    }
+
+    &--nested {
+      width: 100%;
+    }
+
+    &--first {
+      border-top: none;
+    }
+
+    &--last {
+      border-bottom: none;
+    }
+
+    &--clickable {
+      pointer-events: auto;
+    }
+
+    &--go-to {
+      display: none;
+    }
+  }
+
+  &__item--active > &__link--main-secondary {
+    color: $color-red;
+    background: hex-to-rgba($color-white, 0.7);
+  }
+
+  &__link {
+    display: block;
+    padding: 15px 20px;
+    position: relative;
+
+    &:hover,
+    &:focus,
+    &--active {
+      color: $color-red;
+    }
+
+    &--main {
+      min-width: 100px;
+      text-align: center;
+      padding: 21px 20px 20px;
+    }
+
+    &--main-secondary:hover {
+      background-color: hex-to-rgba($color-white, 0.7);
+    }
+
+    &--active,
+    &--main:hover {
+      color: $color-red;
+
+      &::after {
+        background-color: $color-red;
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        height: 3px;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &--nested {
+      padding-left: 40px;
+    }
+
+    &--nested-sub {
+      padding-left: 60px;
+    }
+
+    &--icon {
+      line-height: 0;
+      padding: 21px 20px 23px;
+    }
+
+    &--slim {
+      padding: 4px 20px;
+
+      &:hover {
+        background-color: $color-white;
+        color: $color-mine-shaft;
+      }
+    }
+
+    &--menu {
+      padding: 16px 20px;
+    }
+
+    &--menu#{&}--active {
+      &:hover {
+        background-color: $color-white;
+        color: $color-mine-shaft;
+      }
+    }
+
+    &--menu#{&}--active .navigation__toggle {
+      display: none;
+    }
+
+    &--menu#{&}--active .navigation__close {
+      display: block;
+    }
+
+    &--user#{&}--active {
+      background-color: hex-to-rgba($color-white, 0.95);
+
+      &::after {
+        content: none;
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: hex-to-rgba($color-white, 0.95);
+      }
+    }
+  }
+
+  &__close {
+    display: none;
+  }
+
+  &__user {
+    height: 53px;
+    width: 60px;
+
+    &--icon {
+      height: auto;
+      width: auto;
+      line-height: 0;
+      padding: 15px 25px;
+    }
+
+    &--close {
+      padding: 6px;
+      color: $color-white;
+    }
+  }
+
+  &__basket {
+    background-color: $color-red;
+    border-radius: 50%;
+    color: $color-white;
+    display: inline-block;
+    font-size: 13px;
+    font-family: $font-family-vodafone-regular-bold;
+    height: 20px;
+    line-height: $line-height-double;
+    position: absolute;
+    right: 5px;
+    text-align: center;
+    top: 10px;
+    transform: scale(0.75);
+    width: 20px;
+  }
+
+  &__global {
+    width: 100%;
+    overflow: hidden;
+    background: none;
+    z-index: 1;
+    padding-left: 60px;
+
+    &--type {
+      position: relative;
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      background: none;
+      float: left;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        width: 265px;
+        background: $color-abbey;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        width: 100vw;
+        background: $color-abbey;
+      }
+    }
+
+    &--language {
+      position: static;
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      background: none;
+      float: right;
+    }
+  }
+
+  &__site {
+    font-size: 16px;
+    background-color: $color-abbey;
+    color: $color-silver;
+
+    &--active {
+      background-color: $color-porcelain;
+      color: $color-mine-shaft;
+    }
+  }
+
+  &__site-chevron {
+    background-color: $color-red;
+    position: relative;
+    width: 54px;
+    height: 54px;
+    float: right;
+  }
+
+  &__select {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    padding-right: 22px;
+    overflow: hidden;
+  }
+
+  &__selectable {
+    color: $color-white;
+    padding: 5px;
+  }
+}
+
+.touch {
+  .navigation__item--go-to {
+    display: inline-block;
+  }
+}
+
+.mouse-active {
+  .navigation {
+    &__link {
+      &:focus {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-desktop) {
+  .navigation {
+    &__spring {
+      max-width: none;
+      margin-left: 0;
+      max-height: none;
+    }
+
+    &--tertiary {
+      margin: 0;
+      -webkit-overflow-scrolling: touch;
+      width: 370px;
+      right: -20px;
+      top: auto;
+      bottom: auto;
+      position: absolute;
+      overflow: visible;
+
+      &::before {
+        background-color: hex-to-rgba($color-white, 0.96);
+        content: "";
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: inherit;
+        z-index: 0;
+      }
+
+      &--user {
+        background: transparent;
+      }
+    }
+
+    &--display {
+      transition-delay: 0s;
+      display: block;
+    }
+
+    &__hide {
+      position: relative;
+      z-index: 2;
+    }
+
+    &__item {
+      font-size: 20px;
+      pointer-events: auto;
+      font-family: $font-family-vodafone-regular;
+
+      &--tertiary {
+        padding: 0 10px;
+        color: $color-mine-shaft;
+      }
+
+      &--site {
+        padding: 10px;
+      }
+
+      &--nested {
+        padding-left: 20px;
+      }
+    }
+
+    &__item--clickable &__link--active#{&}__link--menu,
+    &__item--clickable &__link--active#{&}__link--menu:hover {
+      background-color: $color-red;
+      color: $color-white;
+    }
+
+    &__link {
+      padding: 15px 10px;
+
+      &--nested {
+        padding-left: 40px;
+      }
+
+      &--icon {
+        margin: 8px 5px;
+        padding: 10px;
+      }
+
+      &--icon-last {
+        margin-right: 0;
+      }
+
+      &--menu {
+        z-index: 2;
+      }
+
+      &--menu#{&}--active {
+        background-color: $color-red;
+        color: $color-white;
+
+        &:hover {
+          background-color: $color-white;
+          color: $color-mine-shaft;
+        }
+      }
+
+      &--menu#{&}--active .navigation__toggle {
+        display: none;
+      }
+
+      &--menu#{&}--active .navigation__close {
+        display: block;
+      }
+
+      &--active {
+        background-color: $color-white;
+        color: $color-mine-shaft;
+      }
+    }
+
+    &__user {
+      &--menu {
+        padding: 0;
+        border-radius: 50%;
+      }
+
+      &--icon {
+        padding: 15px;
+      }
+
+      &--close {
+        padding: 10px;
+      }
+    }
+
+    &__chevron {
+      color: $color-red;
+      margin-right: 10px;
+      padding-left: 0;
+      right: 30px;
+
+      &--site {
+        margin-right: 0;
+      }
+    }
+
+    &__site {
+      background-color: $color-dove-gray;
+      color: $color-white;
+      font-size: inherit;
+      margin-top: 40px;
+
+      &:hover {
+        background-color: $color-mine-shaft;
+        color: $color-white;
+      }
+
+      &--active {
+        background-color: transparent;
+        border-bottom: 2px solid $color-white;
+      }
+    }
+
+    &__site &__chevron {
+      color: $color-white;
+    }
+
+    &__basket {
+      right: 0;
+      top: 0;
+    }
+
+    &__accordion {
+      padding-bottom: 180px;
+      max-height: 100vh; // For Galaxy S4 as it doesn't support calc()
+      max-height: calc(100vh - 180px); // Other browsers
+      overflow-y: auto;
+    }
+  }
+
+  .navigation__item--go-to,
+  .touch .navigation__item--go-to {
+    display: block;
+  }
+
+  .mouse-active {
+    .navigation {
+      &__link {
+        &--menu.navigation__link--active:active,
+        &--user.navigation__link--active:active,
+        &--menu.navigation__link--active:focus,
+        &--user.navigation__link--active:focus {
+          background-color: $color-red;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-tablet) {
+  .navigation {
+    &__chevron {
+      float: right;
+    }
+
+    &--tertiary {
+      left: 45px;
+      position: fixed;
+      width: auto;
+      right: 0;
+
+      &::before {
+        left: 45px;
+        right: 0;
+      }
+    }
+
+    &__link {
+      padding: 15px 10px;
+
+      &--icon {
+        padding: 6px;
+        margin: 8px 5px;
+      }
+
+      &--icon-last {
+        margin-right: 0;
+      }
+
+      &--nested {
+        padding-left: 30px;
+      }
+
+      &--user.navigation__link--active {
+        border-radius: 0;
+        padding: 8px;
+      }
+    }
+
+    &__user {
+      height: 40px;
+      width: 47px;
+
+      &--icon {
+        height: auto;
+        width: auto;
+        padding: 10px;
+      }
+
+      &--close {
+        padding: 0;
+      }
+
+      &--menu {
+        padding: 0;
+        border-radius: 50%;
+      }
+    }
+  }
+}

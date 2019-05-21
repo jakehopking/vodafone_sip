@@ -3,10 +3,17 @@
 @import "./scss/settings/colours";
 @import "./scss/settings/fonts";
 @import "./scss/settings/font-sizes";
+@import "./scss/settings/line-heights";
 
+// Tools
+@import "./scss/tools/clearfix";
 
 // Base
 @import "./scss/base/body";
+
+// Components
+@import "./scss/components/navigation";
+
 
 
 .main-content {
