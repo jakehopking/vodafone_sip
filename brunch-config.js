@@ -22,7 +22,7 @@ exports.npm = {
     bootstrap: "bootstrap"
   },
   styles: {
-    bootstrap: ["dist/css/bootstrap.css"]
+    bootstrap: ["dist/css/bootstrap.css", "dist/css/bootstrap.css.map"]
   },
   sass: { options: { includePaths: ["node_modules/"] } }
 };

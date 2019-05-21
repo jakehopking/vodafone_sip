@@ -1,0 +1,5 @@
+.gutter {
+  @include gutters-classes;
+  @include gutters-classes($breakpoint: $breakpoint-desktop);
+  @include gutters-classes($breakpoint: $breakpoint-tablet);
+}

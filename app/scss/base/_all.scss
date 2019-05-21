@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+
+  &:focus {
+    outline: 2px solid $color-cerulean;
+  }
+
+  &:active {
+    outline: 0;
+  }
+}

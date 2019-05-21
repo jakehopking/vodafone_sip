@@ -1,0 +1,5 @@
+.flush {
+  @include flush-classes;
+  @include flush-classes($breakpoint: $breakpoint-desktop);
+  @include flush-classes($breakpoint: $breakpoint-tablet);
+}

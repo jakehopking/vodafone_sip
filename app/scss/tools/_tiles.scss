@@ -1,0 +1,109 @@
+@function tiles-fraction-exists($x, $y) {
+  @return ($y == $x and $x != 1) or ($y % 2 == 0 and $x % 2 == 0) or
+    ($y % 3 == 0 and $x % 3 == 0) or ($y % 5 == 0 and $x % 5 == 0);
+}
+
+@mixin tiles-classes(
+  $breakpoint: false,
+  $tiles-dimensions-delimiter: $tiles-dimensions-delimiter-default
+) {
+  @if $breakpoint {
+    @media only screen and (max-width: $breakpoint) {
+      $device: "";
+
+      @if $breakpoint == $breakpoint-tablet {
+        $device: "sm";
+      }
+
+      @if $breakpoint == $breakpoint-desktop {
+        $device: "md";
+      }
+
+      @if $breakpoint == $breakpoint-tv {
+        $device: "lg";
+      }
+
+      @include tiles-item($tiles-dimensions-delimiter, $device: "#{$device}-");
+    }
+  } @else {
+    @include tiles-item($tiles-dimensions-delimiter);
+  }
+}
+
+@mixin tiles-item($tiles-dimensions-delimiter, $device: "") {
+  &__item {
+    $tiles-dimensions-delimiter: \/;
+
+    @for $horizontal-x from 1 through $tiles-column-count {
+      @for $horizontal-y from 1 through $horizontal-x {
+        @if tiles-fraction-exists($horizontal-x, $horizontal-y) == false {
+          @for $vertical-x from 1 through $tiles-column-count {
+            @for $vertical-y from 1 through $vertical-x {
+              @if tiles-fraction-exists($vertical-x, $vertical-y) == false {
+                &--#{$device}#{$horizontal-y}#{$tiles-dimensions-delimiter}#{$horizontal-x}-#{$vertical-y}#{$tiles-dimensions-delimiter}#{$vertical-x} {
+                  width: percentage($horizontal-y / $horizontal-x);
+
+                  &::after {
+                    padding-bottom: percentage($vertical-y / $vertical-x);
+                  }
+
+                  > .tiles__content {
+                    position: absolute;
+                  }
+                }
+              }
+
+              @if tiles-fraction-exists($vertical-y, $vertical-x) == false {
+                &--#{$device}#{$horizontal-y}#{$tiles-dimensions-delimiter}#{$horizontal-x}-#{$vertical-x}#{$tiles-dimensions-delimiter}#{$vertical-y} {
+                  width: percentage($horizontal-y / $horizontal-x);
+
+                  &::after {
+                    padding-bottom: percentage($vertical-x / $vertical-y);
+                  }
+
+                  > .tiles__content {
+                    position: absolute;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // auto height tile breakpoints
+    @for $horizontal-x from 1 through $tiles-column-count {
+      @for $horizontal-y from 1 through $horizontal-x {
+        @if tiles-fraction-exists($horizontal-x, $horizontal-y) == false {
+          &--#{$device}#{$horizontal-y}#{$tiles-dimensions-delimiter}#{$horizontal-x}-auto {
+            width: percentage($horizontal-y / $horizontal-x);
+
+            &::after {
+              padding-bottom: 0;
+            }
+
+            > .tiles__content {
+              position: static;
+            }
+          }
+        }
+      }
+    }
+
+    // auto width tile breakpoints
+    @for $vertical-x from 1 through $tiles-column-count {
+      @for $vertical-y from 1 through $vertical-x {
+        @if tiles-fraction-exists($vertical-x, $vertical-y) == false {
+          &--#{$device}auto-#{$vertical-y}#{$tiles-dimensions-delimiter}#{$vertical-x} {
+            width: 100%;
+
+            &::after {
+              padding-bottom: percentage($vertical-y / $vertical-x);
+            }
+          }
+        }
+      }
+    }
+  }
+}

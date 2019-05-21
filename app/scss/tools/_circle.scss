@@ -1,0 +1,6 @@
+@mixin circle() {
+  animation-name: circle;
+  animation-duration: 0.4s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}

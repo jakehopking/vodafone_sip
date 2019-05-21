@@ -1,0 +1,13 @@
+.float {
+  &--left {
+    float: left !important;
+  }
+
+  &--right {
+    float: right !important;
+  }
+
+  &--none {
+    float: none !important;
+  }
+}

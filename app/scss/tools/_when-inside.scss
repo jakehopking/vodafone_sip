@@ -1,0 +1,10 @@
+@mixin when-inside($selector)
+{
+	@if $selector != null
+	{
+		#{$selector} &
+		{
+			@content;
+		}
+	}
+}

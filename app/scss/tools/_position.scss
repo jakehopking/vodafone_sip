@@ -1,0 +1,13 @@
+2%position {
+  &--center-center {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin position($position: "center-center", $width: 100%) {
+  @extend %position--#{$position};
+  width: $width;
+}

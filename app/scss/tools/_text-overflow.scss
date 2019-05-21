@@ -1,0 +1,20 @@
+@mixin text-overflow($line-height: $line-height-base, $line-count: 1) {
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  position: relative;
+  line-height: $line-height;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0;
+  -webkit-line-clamp: $line-count;
+  max-height: $line-height * $line-count;
+
+  @supports (-webkit-line-clamp: $line-count) {
+    max-height: none;
+
+    &::after {
+      display: none;
+    }
+  }
+}

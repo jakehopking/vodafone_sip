@@ -1,0 +1,37 @@
+@mixin carousel-columns-classes-old(
+  $carousel-columns-count,
+  $breakpoint: false
+) {
+  @if $breakpoint {
+    @media only screen and (max-width: $breakpoint) {
+      $device: "";
+
+      @if $breakpoint == $breakpoint-tablet {
+        $device: "sm";
+      }
+
+      @if $breakpoint == $breakpoint-desktop {
+        $device: "md";
+      }
+
+      @if $breakpoint == $breakpoint-tv {
+        $device: "lg";
+      }
+
+      @include carousel-columns-width-old(
+        $carousel-columns-count,
+        "#{$device}-"
+      );
+    }
+  } @else {
+    @include carousel-columns-width-old($carousel-columns-count);
+  }
+}
+
+@mixin carousel-columns-width-old($carousel-columns-count, $device: "") {
+  @for $x from 1 through $carousel-columns-count {
+    &--#{$device}#{$x} {
+      width: percentage(1 / $x);
+    }
+  }
+}

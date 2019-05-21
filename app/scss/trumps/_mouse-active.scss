@@ -1,0 +1,7 @@
+.mouse-active {
+  * {
+    &:focus {
+      outline: 0 !important;
+    }
+  }
+}

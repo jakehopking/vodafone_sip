@@ -1,24 +1,15 @@
 // Settings
-@import "./scss/settings/breakpoints";
-@import "./scss/settings/colours";
-@import "./scss/settings/fonts";
-@import "./scss/settings/font-sizes";
-@import "./scss/settings/line-heights";
-@import "./scss/settings/springs";
-
+@import "./scss/settings/index";
 // Tools
-@import "./scss/tools/clearfix";
-
+@import "./scss/tools/index";
 // Base
-@import "./scss/base/body";
-
+@import "./scss/base/index";
 // Objects
-@import "./scss/objects/springs";
-
-
+@import "./scss/objects/index";
 // Components
-@import "./scss/components/header";
-@import "./scss/components/navigation";
+@import "./scss/components/index";
+// Trumps
+@import "./scss/trumps/index";
 
 
 

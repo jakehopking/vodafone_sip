@@ -1,0 +1,47 @@
+@mixin gutters-classes($breakpoint: false) {
+  @if $breakpoint {
+    @media only screen and (max-width: $breakpoint) {
+      $device: "";
+
+      @if $breakpoint == $breakpoint-tablet {
+        $device: "sm";
+      }
+
+      @if $breakpoint == $breakpoint-desktop {
+        $device: "md";
+      }
+
+      @if $breakpoint == $breakpoint-tv {
+        $device: "lg";
+      }
+
+      @include gutters-margin($device: "#{$device}-");
+    }
+  } @else {
+    @include gutters-margin;
+  }
+}
+
+@mixin gutters-margin($device: "") {
+  $gutter: 20px;
+
+  &--#{$device}all {
+    margin: $gutter !important;
+  }
+
+  &--#{$device}top {
+    margin-top: $gutter !important;
+  }
+
+  &--#{$device}bottom {
+    margin-bottom: $gutter !important;
+  }
+
+  &--#{$device}left {
+    margin-left: $gutter !important;
+  }
+
+  &--#{$device}right {
+    margin-right: $gutter !important;
+  }
+}

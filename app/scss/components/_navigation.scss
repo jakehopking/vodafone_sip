@@ -151,12 +151,13 @@
 
   &__link {
     display: block;
-    padding: 15px 20px;
+    padding: 20px 20px;
     position: relative;
 
     &:hover,
     &:focus,
     &--active {
+      text-decoration: none;
       color: $color-red;
     }
 
@@ -170,6 +171,7 @@
       background-color: hex-to-rgba($color-white, 0.7);
     }
 
+    &:hover,
     &--active,
     &--main:hover {
       color: $color-red;
@@ -284,7 +286,7 @@
     overflow: hidden;
     background: none;
     z-index: 1;
-    padding-left: 60px;
+    padding-left: 75px;
 
     &--type {
       position: relative;
