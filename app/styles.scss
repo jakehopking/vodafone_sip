@@ -1,11 +1,13 @@
+// Settings
+@import "./scss/settings/breakpoints";
 @import "./scss/settings/colours";
+@import "./scss/settings/fonts";
+@import "./scss/settings/font-sizes";
 
-// Test global colours import
-$vodafone: $color-red;
 
-body {
-  background: $vodafone;
-}
+// Base
+@import "./scss/base/body";
+
 
 .main-content {
   padding: 40px 0;
