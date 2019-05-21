@@ -14,43 +14,52 @@ $font-lang-sets: ("gre/", "U+1F00-1FFF, U+0370-03FF"),
   );
 
 $font-family-vodafone-light: "VodafoneLight";
-// $font-filename-vodafone-light: "vodafone-light";
+$font-filename-vodafone-light: "vodafonelt-regular-webfont";
 
 $font-family-vodafone-regular: "VodafoneRegular";
-// $font-filename-vodafone-regular: "vodafone-regular";
+$font-filename-vodafone-regular: "vodafonerg-bold-webfont";
 
 $font-family-vodafone-regular-bold: "VodafoneRegularBold";
-// $font-filename-vodafone-regular-bold: "vodafone-bold";
+$font-filename-vodafone-regular-bold: "vodafonerg-regular-webfont";
 
 @font-face {
   font-family: $font-family-vodafone-light;
-  src: url('#{$font-path}vodafonelt-regular-webfont.eot');
-	src: url('#{$font-path}vodafonelt-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('#{$font-path}vodafonelt-regular-webfont.woff') format('woff'),
-        url('#{$font-path}vodafonelt-regular-webfont.ttf') format('truetype'),
-        url('#{$font-path}vodafonelt-regular-webfont.svg#webfont') format('svg');
+  src: url("#{$font-path}#{$font-filename-vodafone-light}.eot");
+  src: url("#{$font-path}#{$font-filename-vodafone-light}.eot?#iefix")
+      format("embedded-opentype"),
+    url("#{$font-path}#{$font-filename-vodafone-light}.woff") format("woff"),
+    url("#{$font-path}#{$font-filename-vodafone-light}.ttf") format("truetype"),
+    url("#{$font-path}#{$font-filename-vodafone-light}.svg#webfont")
+      format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: $font-family-vodafone-regular-bold;
-  src: url('#{$font-path}vodafonerg-bold-webfont.eot');
-  src: url('#{$font-path}vodafonerg-bold-webfont.eot?#iefix') format('embedded-opentype'),
-        url('#{$font-path}vodafonerg-bold-webfont.woff') format('woff'),
-        url('#{$font-path}vodafonerg-bold-webfont.ttf') format('truetype'),
-        url('#{$font-path}vodafonerg-bold-webfont.svg#webfont') format('svg');
+  src: url("#{$font-path}#{$font-filename-vodafone-regular}.eot");
+  src: url("#{$font-path}#{$font-filename-vodafone-regular}.eot?#iefix")
+      format("embedded-opentype"),
+    url("#{$font-path}#{$font-filename-vodafone-regular}.woff") format("woff"),
+    url("#{$font-path}#{$font-filename-vodafone-regular}.ttf")
+      format("truetype"),
+    url("#{$font-path}#{$font-filename-vodafone-regular}.svg#webfont")
+      format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: $font-family-vodafone-regular;
-  src: url('#{$font-path}vodafonerg-regular-webfont.eot');
-  src: url('#{$font-path}vodafonerg-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('#{$font-path}vodafonerg-regular-webfont.woff') format('woff'),
-        url('#{$font-path}vodafonerg-regular-webfont.ttf') format('truetype'),
-        url('#{$font-path}vodafonerg-regular-webfont.svg#webfont') format('svg');
+  src: url("#{$font-path}#{$font-filename-vodafone-regular-bold}.eot");
+  src: url("#{$font-path}#{$font-filename-vodafone-regular-bold}.eot?#iefix")
+      format("embedded-opentype"),
+    url("#{$font-path}#{$font-filename-vodafone-regular-bold}.woff")
+      format("woff"),
+    url("#{$font-path}#{$font-filename-vodafone-regular-bold}.ttf")
+      format("truetype"),
+    url("#{$font-path}#{$font-filename-vodafone-regular-bold}.svg#webfont")
+      format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -61,9 +70,9 @@ $font-family-serif: Georgia, "Times New Roman", Times, serif;
 $font-family-monospace: "Fira Mono", Menlo, Monaco, Consolas, "Courier New",
   monospace;
 
-// $font-list-vodafone: (
-//     $font-family-vodafone-light,
-//     $font-filename-vodafone-light
-//   ),
-//   ($font-family-vodafone-regular, $font-filename-vodafone-regular),
-//   ($font-family-vodafone-regular-bold, $font-filename-vodafone-regular-bold);
+$font-list-vodafone: (
+    $font-family-vodafone-light,
+    $font-filename-vodafone-light
+  ),
+  ($font-family-vodafone-regular, $font-filename-vodafone-regular),
+  ($font-family-vodafone-regular-bold, $font-filename-vodafone-regular-bold);
