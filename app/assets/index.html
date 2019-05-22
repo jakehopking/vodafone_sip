@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Vodafone SIP: Portal</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="/app.css" />
     <script src="/vendor.js"></script>
     <script src="/app.js"></script>
@@ -24,31 +30,27 @@
       <header>
         <div class="header" data-js="_language">
           <div class="js-navigation js-navigation-language navigation">
-            <div class="spring">
+            <div class="container">
               <ul
                 class="navigation__list navigation__global navigation__hide navigation__hide--brand no-gutter--all"
               >
                 <li class="navigation__spring">
-                  <ul
-                    class="js-navigation navigation navigation__list navigation__global--type"
-                  >
-                    <li
-                      class="js-navigation-item navigation__item hide--md hide--sm"
-                    >
+                  <ul class="js-navigation navigation navigation__list navigation__global--type">
+                    <li class="js-navigation-item navigation__item hide--md hide--sm">
                       <a
                         href="https://www.vodafone.co.uk"
                         class="js-navigation-link navigation__link navigation__link--slim navigation__site navigation__site--active"
-                        >SIP</a
                       >
+                        SIP
+                      </a>
                     </li>
-                    <li
-                      class="js-navigation-item navigation__item hide--md hide--sm"
-                    >
+                    <li class="js-navigation-item navigation__item hide--md hide--sm">
                       <a
                         href="https://www.vodafone.co.uk/business"
                         class="js-navigation-link navigation__link navigation__link--slim navigation__site"
-                        >LEAP</a
                       >
+                        LEAP
+                      </a>
                     </li>
                   </ul>
                 </li>
@@ -59,7 +61,7 @@
             class="js-navigation navigation navigation--primary navigation--closed"
             data-js="_navigation"
           >
-            <div class="spring">
+            <div class="container">
               <ul
                 class="navigation__list navigation__spring navigation__spring--primary navigation__hide navigation__hide--icons"
               >
@@ -73,9 +75,7 @@
                   </a>
                 </li>
 
-                <li
-                  class="js-navigation-item navigation__item hide--sm hide--md"
-                >
+                <li class="js-navigation-item navigation__item hide--sm hide--md">
                   <a
                     href="//www.vodafone.co.uk/shop/index.htm"
                     class="js-navigation-link navigation__link"
@@ -83,9 +83,7 @@
                     Home
                   </a>
                 </li>
-                <li
-                  class="js-navigation-item navigation__item hide--sm hide--md"
-                >
+                <li class="js-navigation-item navigation__item hide--sm hide--md">
                   <a
                     href="//www.vodafone.co.uk/shop/index.htm"
                     class="js-navigation-link navigation__link navigation__link--active"
@@ -101,10 +99,22 @@
     </vf-header>
 
     <div class="container">
-      <div class="main-content">
-        <h1>SIP Portal</h1>
-        <div class="row">
-          <div class="col-md-12"></div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="breadcrumbs breadcrumbs--sip">
+            <ol class="breadcrumbs__list">
+              <li
+                class="breadcrumbs__item icon-psudo icon-psudo--after icon-psudo--fa-solid icon-psudo--fa-chevron-right"
+              >
+                <a href="#" class="breadcrumbs__crumb breadcrumbs__crumb--first">
+                  Home
+                </a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a href="#" class="breadcrumbs__crumb breadcrumbs__crumb--current">Data Steward</a>
+              </li>
+            </ol>
+          </div>
         </div>
       </div>
     </div>

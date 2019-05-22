@@ -15,6 +15,22 @@
     background-color: $color-white;
     border-bottom: 1px solid hex-to-rgba($color-dove-gray, 0.5);
     background-clip: padding-box;
+
+    .navigation__link {
+      &:hover,
+      &:focus,
+      &--active {
+        &::after {
+          background-color: $color-red;
+          content: "";
+          position: absolute;
+          bottom: -1px;
+          height: 3px;
+          left: 0;
+          right: 0;
+        }
+      }
+    }
   }
 
   &--fixed {
@@ -48,7 +64,7 @@
     &--primary {
       max-width: 1200px;
       margin: 0 auto;
-      padding-left: 75px;
+      // padding-left: 75px;
     }
   }
 
@@ -175,16 +191,6 @@
     &--active,
     &--main:hover {
       color: $color-red;
-
-      &::after {
-        background-color: $color-red;
-        content: "";
-        position: absolute;
-        bottom: -1px;
-        height: 3px;
-        left: 0;
-        right: 0;
-      }
     }
 
     &--nested {
@@ -286,7 +292,7 @@
     overflow: hidden;
     background: none;
     z-index: 1;
-    padding-left: 75px;
+    // padding-left: 75px;
 
     &--type {
       position: relative;

@@ -11,7 +11,10 @@ exports.files = {
 
 exports.plugins = {
   babel: { presets: ["latest", "stage-0"] },
-  copycat: { fonts: ["node_modules/bootstrap/dist/fonts"], onlyChanged: true }
+  copycat: {
+    fonts: ["node_modules/bootstrap/dist/fonts"],
+    onlyChanged: true
+  }
 };
 
 exports.npm = {
@@ -22,7 +25,7 @@ exports.npm = {
     bootstrap: "bootstrap"
   },
   styles: {
-    bootstrap: ["dist/css/bootstrap.css", "dist/css/bootstrap.css.map"]
+    bootstrap: ["dist/css/bootstrap.css"]
   },
   sass: { options: { includePaths: ["node_modules/"] } }
 };

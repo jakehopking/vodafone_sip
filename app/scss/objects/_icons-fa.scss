@@ -1,0 +1,41 @@
+.icon-psudo {
+  &::before,
+  &::after {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  &--fa-solid {
+    &::before,
+    &::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+    }
+  }
+  &--fa-regular {
+    &::before,
+    &::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 400;
+    }
+  }
+
+  &--fa-chevron-right {
+    &::before,
+    &::after {
+      content: "\f054";
+    }
+  }
+}
+.icon-psudo--after {
+  &::before {
+    content: none;
+  }
+}
+.icon-psudo--before {
+  &::after {
+    content: none;
+  }
+}

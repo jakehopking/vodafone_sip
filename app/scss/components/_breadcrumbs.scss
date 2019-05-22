@@ -1,0 +1,98 @@
+.breadcrumbs {
+  background: inherit;
+  border-bottom: 1px solid $color-silver;
+  border-top: 1px solid $color-silver;
+  padding: 18px 0;
+  text-align: left;
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &--sip {
+    border-top: none;
+    padding: 10px 0;
+  }
+
+  &--extrude {
+    background-color: $color-wild-sand;
+    color: $color-mine-shaft;
+  }
+
+  &--dark {
+    background-color: $color-mine-shaft;
+    border-color: $color-dove-gray;
+    color: $color-silver;
+  }
+
+  &--transparent {
+    background-color: hex-to-rgba($color-black, 0.6);
+    color: $color-white;
+    border-color: hex-to-rgba($color-silver, 0.4);
+    position: relative;
+  }
+
+  &--abbey {
+    background-color: $color-abbey;
+    border-color: $color-dove-gray;
+    color: $color-white;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    &::after {
+      font-size: 0.8em;
+    }
+  }
+
+  &__crumb {
+    margin: 0 5px;
+    position: relative;
+    &--first {
+      margin-left: 0;
+    }
+
+    &::after {
+      content: " ";
+      border-bottom: 1px solid transparent;
+      border-color: inherit;
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+    }
+
+    &--current {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__chevron {
+    display: inline-block;
+    vertical-align: middle;
+    color: currentColor;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-desktop) {
+  .breadcrumbs {
+    padding: 14px 0;
+
+    &__chevron {
+      transform: scaleX(-1);
+      float: left;
+    }
+  }
+}
