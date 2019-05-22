@@ -1,0 +1,123 @@
+// Example
+
+// Vars 
+$card-header-font-size:                   22px;
+$card-radius:                             $ui-default-radius;
+$card-box-shadow:                         $ui-default-box-shadow;
+$card-bg-colour:                          $ui-default-bg-colour;
+$card-margin:                             $base-spacing-unit;
+$card-padding:                            $base-spacing-unit;
+$card-padding-x:                          0 ($base-spacing-unit);
+$card-child-margin-bottom:                0; // Default botom margin for child sections
+
+// Anchor cards
+$card-bg-colour-hover:                    rgb(240, 240, 240);
+$card-bg-colour-active:                   rgb(255, 226, 226);
+
+$small-card-child-margin-bottom:          $half-spacing-unit;
+$small-card-padding:                      $half-spacing-unit;
+$small-card-padding-x:                    0 ($half-spacing-unit);
+
+// Establish card
+.card {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: column nowrap;
+  height: 100%;
+  background-color: $card-bg-colour;
+  border-radius: $card-radius;
+  box-shadow: $card-box-shadow;
+  margin-bottom: $card-margin;
+  overflow: hidden;
+}
+.card--unstructured {
+  padding: $base-spacing-unit;
+}
+
+  /// Card child elements
+
+  // Header
+  .card__header {
+    flex-grow: 0;
+    margin-bottom: $card-child-margin-bottom;
+    padding: $card-padding-x;
+    padding-bottom: ($card-padding / 2);
+    padding-top: ($card-padding / 2);
+    font-size: $card-header-font-size;
+  }
+  .card__header--with-tools {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    .card__title {
+      flex: 1 1 auto;
+    }
+    .card__tools {
+      display: flex;
+      flex: 0 0 60px;
+      justify-content: space-around;
+    }
+  }
+
+  .card__header--red {
+    background-color: $color-red;
+    &, * {
+      color: white;
+    }
+  }
+
+    // Header with tools
+    
+  // Body
+  .card__body {
+    flex-grow: 1;
+    margin-bottom: $card-child-margin-bottom;
+    padding: $card-padding-x;
+  }
+
+  .card__body--alt {
+    background-color: $color-wild-sand;
+  }
+  
+  // Images
+  .card__image {
+    margin-bottom: $card-child-margin-bottom;
+    padding: $card-padding-x;
+  }
+  
+  // Footer
+  .card__footer {
+    flex-grow: 0;
+    padding: $card-padding-x;
+  }
+
+  /// Card modifiers
+  .card--bleed {
+    padding: 0 !important;
+  }
+
+  // Size modifiers
+  .card--small {
+    .card__header,
+    .card__body,
+    .card__image,
+    .card__footer {
+      padding: $small-card-padding-x;
+      margin-bottom: $small-card-child-margin-bottom;
+    }
+    .card--unstructured {
+      padding: $half-spacing-unit;
+    }
+  }
+
+// Anchor cards
+a.card--link-tile {
+  transition: $ui-default-transition;
+  &:hover {
+    background-color: $card-bg-colour-hover;
+  }
+  &:active {
+    background-color: $card-bg-colour-active;
+  }
+}
