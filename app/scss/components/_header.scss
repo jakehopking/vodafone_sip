@@ -1,11 +1,12 @@
-.header {
+header {
   position: relative;
   width: 100%;
   z-index: 10;
+  flex-shrink: 0;
 }
 
 @media only screen and (max-width: $breakpoint-desktop) {
-  .header {
+  header {
     &__global {
       float: left;
     }
