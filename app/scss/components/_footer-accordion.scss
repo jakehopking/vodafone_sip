@@ -1,0 +1,35 @@
+@media only screen and (max-width: $breakpoint-desktop) {
+  .footer-accordion {
+    margin: 40px 0 0;
+
+    &__item {
+      font-size: 18px;
+    }
+
+    &__heading {
+      border-top: 1px solid $color-dusty-gray;
+      display: block;
+      padding: 10px;
+      font-size: 20px;
+      margin: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__content {
+      padding: 10px 20px;
+
+      &--collapse {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-tablet) {
+  .footer-accordion {
+    margin: 20px 0 0;
+  }
+}

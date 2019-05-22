@@ -1,0 +1,171 @@
+footer {
+  margin-top: auto;
+  flex-shrink: 0;
+  color: $color-white;
+  background-color: $color-abbey;
+  // font-size: 16px;
+  padding-top: $half-spacing-unit;
+  padding-bottom: $half-spacing-unit;
+
+  &__list {
+    margin-bottom: 37px;
+  }
+
+  &__chat {
+    text-align: center;
+  }
+
+  &__banner {
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__image {
+    max-width: none;
+    min-height: 100%;
+    min-width: 100%;
+  }
+
+  &__navigation {
+    padding: 20px 0 50px;
+  }
+
+  &__heading:hover {
+    cursor: pointer;
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__item {
+    margin: 15px 0;
+    font-size: 20px;
+
+    &--last {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__aside {
+    @include clearfix;
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  &__contracts {
+    margin-bottom: 10px;
+    float: left;
+  }
+
+  &__contract {
+    border-left: 1px solid currentColor;
+    display: inline-block;
+    padding: 0 15px;
+
+    &--first {
+      border-left: none;
+      padding-left: 0;
+    }
+  }
+
+  &__copyright {
+    float: right;
+    margin-top: 5px;
+    font-family: $font-family-vodafone-regular;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-desktop) {
+  .footer {
+    &__chat {
+      padding: 0 20px;
+    }
+
+    &__navigation {
+      padding: 20px 20px 40px;
+    }
+
+    &__heading {
+      border-top: 1px solid $color-dusty-gray;
+      display: block;
+      padding: 10px;
+      font-size: 20px;
+      margin: 0;
+
+      &--last {
+        border-bottom: 1px solid $color-dusty-gray;
+      }
+    }
+
+    &__content {
+      padding: 10px 20px;
+    }
+
+    &__icon {
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
+    }
+
+    &__accordion {
+      margin: 40px 0 0;
+    }
+
+    &__aside {
+      margin-top: 40px;
+      font-size: 16px;
+    }
+
+    &__item {
+      margin: 20px 0;
+      font-size: 18px;
+    }
+
+    &__list {
+      margin-bottom: 17px;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-tablet) {
+  .footer {
+    &__aside {
+      margin-top: 20px;
+    }
+
+    &__navigation {
+      padding: 15px 0 30px;
+    }
+
+    &__copyright {
+      clear: left;
+      display: block;
+      float: none;
+    }
+
+    &__heading {
+      padding: 10px;
+    }
+
+    &__accordion {
+      margin: 12px 0 25px;
+    }
+
+    &__contract {
+      padding: 0 5px;
+      margin: 5px 0 15px;
+
+      &--first {
+        padding-left: 0;
+      }
+    }
+
+    &__item {
+      margin: 18px 0;
+    }
+  }
+}
