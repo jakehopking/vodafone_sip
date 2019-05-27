@@ -1,0 +1,60 @@
+.tabs {
+  display: flex;
+  flex-flow: column;
+
+  &__nav {
+    flex-shrink: 0;
+  }
+  &__nav-item {
+    &, &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+  &__content {
+    flex-shrink: 1;
+    flex-grow: 1;
+  }
+  &__pane {
+    padding: $base-spacing-unit;
+    display: none;
+    flex-grow: 1;
+    height: 100%;
+    &--active {
+      display: block;
+    }
+  }
+}
+
+.tabs--dashboard {
+  flex-flow: row;
+  .tabs__nav {
+    width: 35%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+  }
+
+  .tabs__nav-item {
+
+    background-color: $color-wild-sand;
+    padding: $base-spacing-unit;
+    flex-grow: 1;
+    > * {
+      opacity: 0.5;
+    }
+    &--active,
+    &:hover {
+      background-color: white;
+      > * {
+        opacity: 1;
+      }
+    }
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $color-silver;
+    }
+    &:not(.tabs__nav-item--active) {
+      border-right: 1px solid $color-silver;
+    }
+  }
+}
+

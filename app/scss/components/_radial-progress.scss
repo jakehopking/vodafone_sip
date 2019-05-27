@@ -1,0 +1,126 @@
+// Vars
+$rs-circle-size:                      82px;
+$rs-circle-background:                #d6dadc;
+$rs-inset-color:                      #fbfbfb;
+// $rs-shadow:                           6px 6px 10px rgba(0,0,0,0.2);
+$rs-shadow:                           none;
+$rs-good-color:                       $color-green;
+$rs-warning-color:                    $color-cerulean;
+$rs-alert-color:                      $color-red;
+$rs-label-color:                      $color-mine-shaft;
+$rs-progress:                         attr(data-progress);
+$rs-description:                      attr(data-description);
+$rs-inset-size:                       $rs-circle-size / 1.1;
+$rs-percentage-font-size:             $rs-inset-size / 3.67;
+$rs-label-font-size:                  $rs-inset-size / 7;
+
+.radial-progress { 
+  
+  &[data-alertlevel="0"] {
+    &:after, &:before  {
+      color:  $rs-label-color;
+    }
+    .circle .mask .fill {
+      background-color:  $rs-good-color;
+    }
+  }
+  &[data-alertlevel="1"] {
+    &:after, &:before  {
+      color:  $rs-label-color;
+    }
+    .circle .mask .fill {
+      background-color:  $rs-alert-color;
+    }
+  }  
+  &[data-alertlevel="2"] {
+    &:after, &:before  {
+      color:  $rs-label-color;
+    }
+    .circle .mask .fill {
+      background-color:  $rs-warning-color;
+    }
+  }
+  position: relative;
+  margin: 5px;
+  width:  $rs-circle-size;
+  height: $rs-circle-size;
+  background-color: $rs-circle-background;
+  border-radius: 50%;
+  &:before,
+  &:after {
+    position: absolute;
+    left: 0;
+    transform: translateX($rs-circle-size * 0.175);
+    z-index: 1;
+    width: $rs-circle-size * 0.65;
+    height: $rs-circle-size;
+    white-space: pre-wrap; 
+    text-align: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    display: -webkit-box;
+  }
+  &:before {
+    margin-top: -13%;
+    content: $rs-progress'%';
+    font-weight: bold;
+    font-size: $rs-percentage-font-size;
+  }
+  &:after {
+    margin-top: 14%;
+    // content: $rs-progress'%' '\A '$rs-description;
+    content:  $rs-description;
+    font-size: $rs-label-font-size;
+    line-height: 1;
+  }
+  .circle {
+    .mask, .fill, .shadow {
+      width:    $rs-circle-size;
+      height:   $rs-circle-size;
+      position: absolute;
+      border-radius: 50%;
+    }
+    .shadow {
+      box-shadow: $rs-shadow inset;
+    }
+    .mask, .fill {
+      -webkit-backface-visibility: hidden;
+      border-radius: 50%;
+    }
+    .mask {
+      clip: rect(0px, $rs-circle-size, $rs-circle-size, $rs-circle-size/2);
+      .fill {
+        clip: rect(0px, $rs-circle-size/2, $rs-circle-size, 0px);
+      }
+    }
+  }
+  .inset {
+    width:       $rs-inset-size;
+    height:      $rs-inset-size;
+    position:    absolute;
+    margin-left: ($rs-circle-size - $rs-inset-size)/2;
+    margin-top:  ($rs-circle-size - $rs-inset-size)/2;
+    background-color: $rs-inset-color;
+    border-radius: 50%;
+    box-shadow: $rs-shadow;
+  }
+  $i: 0;
+  $increment: 180deg / 100;
+  @while $i <= 100 {
+   &#{"[data-progress='" + $i + "']"} {
+      .circle {
+        .mask.full, .fill {
+          -webkit-transform: rotate($increment * $i);
+          -ms-transform: rotate($increment * $i);
+          transform: rotate($increment * $i);
+        }	
+        .fill.fix {
+          -webkit-transform: rotate($increment * $i * 2);
+          -ms-transform: rotate($increment * $i * 2);
+          transform: rotate($increment * $i * 2);
+        }
+      }
+    }
+    $i: $i + 1;
+  }
+}

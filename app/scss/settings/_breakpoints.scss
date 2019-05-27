@@ -1,3 +1,11 @@
 $breakpoint-tablet: 639px;
 $breakpoint-desktop: 1024px;
 $breakpoint-tv: 1844px;
+
+// Define which breakpoints we want the utilities to build for
+$breakpointsMap: (
+  'none': 0, // Mobile (no breakpoint)
+  sm: $breakpoint-tablet,
+  md: $breakpoint-desktop,
+  lg: $breakpoint-tv,
+);

@@ -1,0 +1,119 @@
+// UTILITY / MARGIN AND PADDING
+// ===============================================================================
+
+// Define local map from global $breakpointMap map
+$utilBreakpointsMap: $breakpointsMap;
+
+// Map of required sizes for margin and padding utility
+// Each additional size adds ~40 classes (when used with sm, md, lg breakpoints). 遠慮ください！
+
+// key: name in class, value: size in css.
+$utilMarPadSizesMap: (
+  auto: auto,
+  "0": 0,
+  1+\/4: (1/4 * $base-spacing-unit), // Escape class name with \ so can use "1/2", "1/4" in html class names
+  1+\/3: (1/3 * $base-spacing-unit),
+  1+\/2: (1/2 * $base-spacing-unit),
+  2+\/3: (2/3 * $base-spacing-unit),
+  3+\/4: (3/4 * $base-spacing-unit),
+  1: (1 * $base-spacing-unit),
+  1+\.5: (1.5 * $base-spacing-unit),
+  2: (2 * $base-spacing-unit),
+  3: (3 * $base-spacing-unit),
+);
+
+// Example CSS generated:
+// .mar-y-1\/4 {
+//   margin-top: 5px !important;
+//   margin-bottom: 5px !important;
+// }
+// .mar-1\.5 {
+//   margin: 30px !important;
+// }
+// Example use in HTML:
+// <div class="mar-y-1/4"></div>
+// <div class="mar-l-1/3-lg"></div>
+// <div class="pad-0"></div>
+// <div class="pad-2-md"></div>
+// <div class="mar-1.5"></div>
+
+
+// Single properties. Defines direction map.
+$utilMarPadDirectionsMap: (
+  'margin':'mar',
+  'margin-top':'mar-t',
+  'margin-right':'mar-r',
+  'margin-bottom':'mar-b',
+  'margin-left':'mar-l',
+  'padding':'pad',
+  'padding-top':'pad-t',
+  'padding-right':'pad-r',
+  'padding-bottom':'pad-b',
+  'padding-left':'pad-l',
+);
+// Double properties (top + bottom (y), left + right(x) manually defined in mixin)
+// e.g.
+// mar-x = margin-left: value; margin-right: value
+// mar-y = margin-top: value; margin-bottom: value
+
+// Loop over breakpoints, then loop over
+@mixin util-responsive-sizes($breakpointsMap, $directionsMap, $sizesMap) {
+  @each $breakpoint in map-keys($breakpointsMap) {
+    @include media($breakpoint) {
+      @each $size, $length in $sizesMap {
+        // Manually define (x,y) classes
+        @if ($breakpoint == 'none') {
+          // x,y for default (no breakpoint)
+          .mar-y-#{$size} {
+            margin-top: $length !important;
+            margin-bottom: $length !important;
+          }
+          .mar-x-#{$size} {
+            margin-left: $length !important;
+            margin-right: $length !important;
+          }
+          .pad-y-#{$size} {
+            padding-top: $length !important;
+            padding-bottom: $length !important;
+          }
+          .pad-x-#{$size} {
+            padding-left: $length !important;
+            padding-right: $length !important;
+          }
+        } @else {
+          // x,y for responsive classes
+          .mar-y-#{$size}-#{$breakpoint} {
+            margin-top: $length !important;
+            margin-bottom: $length !important;
+          }
+          .mar-x-#{$size}-#{$breakpoint} {
+            margin-left: $length !important;
+            margin-right: $length !important;
+          }
+          .pad-y-#{$size}-#{$breakpoint} {
+            padding-top: $length !important;
+            padding-bottom: $length !important;
+          }
+          .pad-x-#{$size}-#{$breakpoint} {
+            padding-left: $length !important;
+            padding-right: $length !important;
+          }
+        }
+        // Loop over directions map
+        @each $prop, $abbrev in $directionsMap {
+          @if ($breakpoint == 'none') { 
+            // Directions default (no breakpoint)
+            .#{$abbrev}-#{$size} { #{$prop}: $length !important; }
+          } @else { 
+            // Directions for reposonive classes
+            .#{$abbrev}-#{$size}-#{$breakpoint} { #{$prop}: $length !important; }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Build it
+// Takes util-responsive-sizes($utilBreakpointsMap: map, $utilMarPadDirectionsMap: map, $utilMarPadSizesMap: map)
+@include util-responsive-sizes($utilBreakpointsMap, $utilMarPadDirectionsMap, $utilMarPadSizesMap);

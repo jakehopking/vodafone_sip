@@ -1,0 +1,47 @@
+// MEDIA BREAKPOINTS
+
+@mixin media($media-query) {
+  // At or above these width, act.
+
+  @if $media-query == "none" {
+    @content;
+  }
+
+  @if $media-query == sm {
+    @media only screen and (min-width: $breakpoint-tablet) {
+      @content;
+    }
+  }
+
+  @if $media-query == md {
+    @media only screen and (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  }
+
+  @if $media-query == lg {
+    @media only screen and (min-width: $breakpoint-tv) {
+      @content;
+    }
+  }
+
+  // Below these width, act.
+
+  @if $media-query == sm_d {
+    @media only screen and (max-width: $breakpoint-tablet - 1) {
+      @content;
+    }
+  }
+
+  @if $media-query == md_d {
+    @media only screen and (max-width: $breakpoint-desktop - 1) {
+      @content;
+    }
+  }
+
+  @if $media-query == lg_d {
+    @media only screen and (max-width: $breakpoint-tv - 1) {
+      @content;
+    }
+  }
+}
