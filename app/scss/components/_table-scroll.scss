@@ -1,0 +1,93 @@
+$ts-border-color:               $color-silver;
+$ts-head-bg-color:              $ts-border-color;
+$ts-head-color:                 black;
+$ts-head-height-default:        32px;
+$ts-table-height-default:       400px;
+$ts-table-height-dash-widget:   $ts-table-height-default / 2;
+$ts-tbody-row-bg-color:         white; 
+$ts-tbody-row-bg-color-odd:     #F8F8F8; 
+$ts-td-border:                  1px dotted #E6E6E6; 
+
+.table-scroll {
+  border: 1px solid $ts-border-color;
+	max-height: $ts-table-height-default;
+  table {
+    border-spacing: 0;
+    width: 100%;
+    tr {
+      display: flex;
+      th, td {
+        padding: 5px 10px;
+        display: flex;
+        flex: 1 0 auto;
+        &:first-of-type {
+          border-right: $ts-td-border;				
+        }
+        &:nth-of-type(2) {
+          border-right: $ts-td-border;				
+        }
+      }
+    }
+    thead {
+      background-color: $ts-head-bg-color;
+      height: $ts-head-height-default;
+      tr {
+        font-size: 17px;
+        position: relative;
+        margin-right: 18px;
+        th {
+          background-color: $ts-head-bg-color;
+          color: $ts-head-color;
+          flex: 1 0 auto;
+          &:last-of-type {
+            text-align: right;
+          }
+        }			
+      }
+    }
+    tbody {
+      display: block;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      width: 100%;
+      height: $ts-table-height-default - $ts-head-height-default;
+      tr {
+        font-size: 14px;
+        background-color: $ts-tbody-row-bg-color;
+        &:nth-of-type(odd) {
+          background-color: $ts-tbody-row-bg-color-odd;
+        }
+      }
+    }
+  }
+}
+
+.table-scroll--dash-widget {
+  margin-top: -$ts-head-height-default;
+  table {
+    thead {
+
+    }
+    tbody {
+      height: $ts-table-height-dash-widget - $ts-head-height-default;
+    }
+  }
+}
+
+.table-scroll--data-steward {
+  table {
+    thead {
+
+    }
+    tbody {
+      tr {
+        td {
+          &:nth-of-type(2) {
+            color: $color-red;
+            font-weight: $font-weight-bold;				
+          }
+        }
+      }
+    }
+  }
+}
