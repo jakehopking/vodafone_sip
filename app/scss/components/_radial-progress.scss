@@ -1,59 +1,62 @@
 // Vars
-$rs-circle-size:                      82px;
-$rs-circle-background:                #d6dadc;
-$rs-inset-color:                      #fbfbfb;
-// $rs-shadow:                           6px 6px 10px rgba(0,0,0,0.2);
-$rs-shadow:                           none;
-$rs-good-color:                       $color-green;
-$rs-warning-color:                    $color-cerulean;
-$rs-alert-color:                      $color-red;
-$rs-label-color:                      $color-mine-shaft;
-$rs-progress:                         attr(data-progress);
-$rs-description:                      attr(data-description);
-$rs-inset-size:                       $rs-circle-size / 1.1;
-$rs-percentage-font-size:             $rs-inset-size / 3.67;
-$rs-label-font-size:                  $rs-inset-size / 7;
+$rp-circle-size:                      82px;
+$rp-circle-background:                #d6dadc;
+$rp-circle-background-static:         #fff;
+$rp-inset-color:                      #fbfbfb;
+// $rp-shadow:                           6px 6px 10px rgba(0,0,0,0.2);
+$rp-shadow:                           none;
+$rp-good-color:                       $color-green;
+$rp-warning-color:                    $color-cerulean;
+$rp-alert-color:                      $color-red;
+$rp-label-color:                      $color-mine-shaft;
+$rp-number:                           attr(data-number);
+$rp-progress:                         attr(data-progress);
+$rp-description:                      attr(data-description);
+$rp-inset-size:                       $rp-circle-size / 1.1;
+$rp-percentage-font-size:             $rp-inset-size / 3.67;
+$rp-label-font-size:                  $rp-inset-size / 7;
 
+// Show a percentage and corresponding radial track
 .radial-progress { 
-  
   &[data-alertlevel="0"] {
     &:after, &:before  {
-      color:  $rs-label-color;
+      color:  $rp-label-color;
     }
     .circle .mask .fill {
-      background-color:  $rs-good-color;
+      background-color:  $rp-good-color;
     }
   }
   &[data-alertlevel="1"] {
     &:after, &:before  {
-      color:  $rs-label-color;
+      color:  $rp-label-color;
     }
     .circle .mask .fill {
-      background-color:  $rs-alert-color;
+      background-color:  $rp-alert-color;
     }
   }  
   &[data-alertlevel="2"] {
     &:after, &:before  {
-      color:  $rs-label-color;
+      color:  $rp-label-color;
     }
     .circle .mask .fill {
-      background-color:  $rs-warning-color;
+      background-color:  $rp-warning-color;
     }
   }
   position: relative;
-  margin: 5px;
-  width:  $rs-circle-size;
-  height: $rs-circle-size;
-  background-color: $rs-circle-background;
+  display: inline-block;
+  margin: 2px;
+  width: $rp-circle-size;
+  height: $rp-circle-size;
+  background-color: $rp-circle-background;
   border-radius: 50%;
   &:before,
   &:after {
     position: absolute;
     left: 0;
-    transform: translateX($rs-circle-size * 0.175);
+    transform: translateX($rp-circle-size * 0.175);
     z-index: 1;
-    width: $rs-circle-size * 0.65;
-    height: $rs-circle-size;
+    width: $rp-circle-size * 0.65;
+    height: $rp-circle-size;
     white-space: pre-wrap; 
     text-align: center;
     -webkit-box-align: center;
@@ -62,47 +65,47 @@ $rs-label-font-size:                  $rs-inset-size / 7;
   }
   &:before {
     margin-top: -13%;
-    content: $rs-progress'%';
+    content: $rp-progress'%';
     font-weight: bold;
-    font-size: $rs-percentage-font-size;
+    font-size: $rp-percentage-font-size;
   }
   &:after {
     margin-top: 14%;
-    // content: $rs-progress'%' '\A '$rs-description;
-    content:  $rs-description;
-    font-size: $rs-label-font-size;
+    // content: $rp-progress'%' '\A '$rp-description;
+    content:  $rp-description;
+    font-size: $rp-label-font-size;
     line-height: 1;
   }
   .circle {
     .mask, .fill, .shadow {
-      width:    $rs-circle-size;
-      height:   $rs-circle-size;
+      width:    $rp-circle-size;
+      height:   $rp-circle-size;
       position: absolute;
       border-radius: 50%;
     }
     .shadow {
-      box-shadow: $rs-shadow inset;
+      box-shadow: $rp-shadow inset;
     }
     .mask, .fill {
       -webkit-backface-visibility: hidden;
       border-radius: 50%;
     }
     .mask {
-      clip: rect(0px, $rs-circle-size, $rs-circle-size, $rs-circle-size/2);
+      clip: rect(0px, $rp-circle-size, $rp-circle-size, $rp-circle-size/2);
       .fill {
-        clip: rect(0px, $rs-circle-size/2, $rs-circle-size, 0px);
+        clip: rect(0px, $rp-circle-size/2, $rp-circle-size, 0px);
       }
     }
   }
   .inset {
-    width:       $rs-inset-size;
-    height:      $rs-inset-size;
+    width:       $rp-inset-size;
+    height:      $rp-inset-size;
     position:    absolute;
-    margin-left: ($rs-circle-size - $rs-inset-size)/2;
-    margin-top:  ($rs-circle-size - $rs-inset-size)/2;
-    background-color: $rs-inset-color;
+    margin-left: ($rp-circle-size - $rp-inset-size)/2;
+    margin-top:  ($rp-circle-size - $rp-inset-size)/2;
+    background-color: $rp-inset-color;
     border-radius: 50%;
-    box-shadow: $rs-shadow;
+    box-shadow: $rp-shadow;
   }
   $i: 0;
   $increment: 180deg / 100;
@@ -123,4 +126,64 @@ $rs-label-font-size:                  $rs-inset-size / 7;
     }
     $i: $i + 1;
   }
+}
+
+// Static (no radial trickery)
+.radial-progress-static {
+  &[data-alertlevel="0"] {
+    &:after, &:before  {
+      color:  $rp-label-color;
+    }
+    border-color: $rp-good-color;
+  }
+  &[data-alertlevel="1"] {
+    &:after, &:before  {
+      color:  $rp-label-color;
+    }
+    border-color: $rp-alert-color;
+  }  
+  &[data-alertlevel="2"] {
+    &:after, &:before  {
+      color:  $rp-label-color;
+    }
+    border-color: $rp-warning-color;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 0;
+    transform: translateX($rp-circle-size * 0.135);
+    z-index: 1;
+    width: $rp-circle-size * 0.65;
+    height: $rp-circle-size - $half-spacing-unit;
+    white-space: pre-wrap; 
+    text-align: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    display: -webkit-box;
+  }
+  &:before {
+    margin-top: -13%;
+    content: $rp-number;
+    font-weight: bold;
+    font-size: $rp-percentage-font-size;
+  }
+  &:after {
+    margin-top: 14%;
+    // content: $rp-progress'%' '\A '$rp-description;
+    content:  $rp-description;
+    font-size: $rp-label-font-size;
+    line-height: 1;
+  }
+
+  position: relative;
+  display: inline-block;
+  margin: 2px;
+  width: $rp-circle-size;
+  height: $rp-circle-size;
+  background-color: $rp-circle-background-static;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 4px;
 }

@@ -28,17 +28,49 @@
 .tabs--dashboard {
   flex-flow: row;
   .tabs__nav {
-    width: 35%;
+    width: 42%;
+    max-width: 390px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
   }
 
   .tabs__nav-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
 
     background-color: $color-wild-sand;
-    padding: $base-spacing-unit;
+    padding: $base-spacing-unit $quarter-spacing-unit $base-spacing-unit $base-spacing-unit;
     flex-grow: 1;
+
+    .tabs__nav-item__child {
+      &:nth-child(1) {
+        order: 0;
+        flex: 0 1 auto;
+        align-self: center;
+        margin-right: auto;
+      }
+      &:nth-child(2) {
+        order: 0;
+        flex: 0 0 auto;
+        align-self: center;
+      }
+      &:nth-child(3) {
+        order: 0;
+        flex: 0 0 auto;
+        align-self: center;
+      }
+      &:nth-child(4) {
+        order: 0;
+        flex: 0 0 auto;
+        align-self: center;
+      }
+    }
+
     > * {
       opacity: 0.5;
     }
