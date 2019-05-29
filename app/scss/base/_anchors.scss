@@ -1,4 +1,16 @@
 a {
+  color: $color-red;
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  color: $color-red-berry;
+  text-decoration: underline;
+}
+a:focus {
+  color: inherit;
+}
+a {
   color: inherit;
   display: inline-block;
   text-decoration: none;
