@@ -1,0 +1,168 @@
+.button {
+//   appearance: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  padding: 11px 37px;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--reset {
+    border: none;
+    padding: 0;
+    background: none;
+  }
+
+  &--primary {
+    color: $color-white;
+    background-color: $color-red;
+
+    &:hover {
+      background-color: $color-red-berry;
+    }
+
+    &--dark {
+      background-color: $color-guardsman-red;
+    }
+  }
+
+  &--secondary {
+    color: $color-white;
+    background-color: $color-dove-gray;
+
+    &:hover {
+      background-color: $color-mine-shaft;
+    }
+
+    &--dark {
+      background-color: $color-silver-chalice;
+      color: $color-mine-shaft;
+
+      &:hover {
+        background-color: $color-silver;
+      }
+    }
+  }
+
+  &--tertiary {
+    background-color: $color-white;
+    border-color: $color-dusty-gray;
+    color: $color-dove-gray;
+
+    &:hover {
+      background-color: $color-wild-sand;
+      border-color: $color-mine-shaft;
+      color: $color-mine-shaft;
+    }
+
+    &--dark {
+      background-color: transparent;
+      border-color: $color-silver;
+      color: $color-white;
+
+      &:hover {
+        background-color: $color-wild-sand;
+      }
+
+      &:focus {
+        color: $color-mine-shaft;
+        background-color: $color-wild-sand;
+      }
+    }
+  }
+
+  &--confirm {
+    color: $color-white;
+    background-color: $color-green;
+
+    &:hover {
+      background-color: darken($color-green, 10%);
+    }
+  }
+
+  &--transparent {
+    background-color: transparent;
+    border-color: currentColor;
+    color: currentColor;
+  }
+
+  &--full-width {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &--square {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+  }
+
+  &--trailing {
+    margin-bottom: 10px;
+  }
+
+  &--disabled {
+    &,
+    &:hover,
+    &:focus {
+      background-color: $color-silver;
+      border-color: $color-silver;
+      color: $color-white;
+      cursor: default;
+    }
+
+    &--dark,
+    &.button--primary--dark,
+    &.button--secondary--dark {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $color-dove-gray;
+        border-color: $color-dove-gray;
+        color: $color-mine-shaft;
+        cursor: default;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &--tiny {
+    font-size: 16px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-tablet) {
+  .button {
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+
+    &--inline {
+      display: inline-block;
+      width: auto;
+    }
+
+    &--square {
+      width: 45px;
+      height: 45px;
+      float: right;
+      margin-right: 5px;
+    }
+  }
+}
