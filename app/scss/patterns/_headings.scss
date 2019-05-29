@@ -1,0 +1,158 @@
+.heading {
+  display: block;
+  font-family: $font-family-vodafone-light;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-single;
+  margin: 0;
+  width: 100%;
+
+  &--1 {
+    @include heading-desktop($level: 1);
+  }
+
+  &--2 {
+    @include heading-desktop($level: 2);
+  }
+
+  &--3 {
+    @include heading-desktop($level: 3);
+  }
+
+  &--4 {
+    @include heading-desktop($level: 4);
+  }
+
+  &--5 {
+    @include heading-desktop($level: 5);
+  }
+
+  &--6 {
+    @include heading-desktop($level: 6);
+  }
+
+  &--light {
+    font-family: $font-family-vodafone-light;
+  }
+
+  &--regular {
+    font-family: $font-family-vodafone-regular;
+  }
+
+  &--bold {
+    font-family: $font-family-vodafone-regular-bold;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--inline-block {
+    display: inline-block;
+    width: auto;
+  }
+
+  &--inline {
+    display: inline;
+  }
+
+  &--leading {
+    margin-top: 0;
+  }
+
+  &--trailing {
+    margin-bottom: 0;
+  }
+
+  &--no-gutter {
+    margin: 0;
+  }
+
+  &--tabs {
+    margin-top: 45px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-desktop) {
+  .heading {
+    &--1 {
+      @include heading-tablet($level: 1);
+    }
+
+    &--2 {
+      @include heading-tablet($level: 2);
+    }
+
+    &--3 {
+      @include heading-tablet($level: 3);
+    }
+
+    &--4 {
+      @include heading-tablet($level: 4);
+    }
+
+    &--5 {
+      @include heading-tablet($level: 5);
+    }
+
+    &--6 {
+      @include heading-tablet($level: 6);
+    }
+
+    &--4,
+    &--5 {
+      margin: 15px 0;
+    }
+
+    &--leading {
+      margin-top: 0;
+    }
+
+    &--trailing {
+      margin-bottom: 0;
+    }
+
+    &--no-gutter {
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-tablet) {
+  .heading {
+    &--1 {
+      @include heading-mobile($level: 1);
+    }
+
+    &--2 {
+      @include heading-mobile($level: 2);
+    }
+
+    &--3 {
+      @include heading-mobile($level: 3);
+    }
+
+    &--4 {
+      @include heading-mobile($level: 4);
+    }
+
+    &--5 {
+      @include heading-mobile($level: 5);
+    }
+
+    &--6 {
+      @include heading-mobile($level: 6);
+    }
+
+    &--leading {
+      margin-top: 0;
+    }
+
+    &--trailing {
+      margin-bottom: 0;
+    }
+
+    &--no-gutter {
+      margin: 0;
+    }
+  }
+}
