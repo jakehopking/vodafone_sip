@@ -4,7 +4,6 @@ $color-mine-shaft: #333333;
 $color-white: #FFFFFF;
 $color-green: #428600;
 
-
 // Secondary colours
 $color-black: #000000;
 $color-red-berry: #990000;
@@ -42,3 +41,9 @@ $color-tundora: #434343;
 $color-alto: #D6D6D6;
 $color-mercury: #E5E5E5;
 $color-limeade: #428600;
+
+// States
+$colour-positive: $color-green;
+$colour-negative: $color-red;
+$colour-warning: $color-tangerine;
+$colour-info: $color-blue-lagoon;

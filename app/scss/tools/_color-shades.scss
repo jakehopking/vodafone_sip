@@ -1,0 +1,12 @@
+// For each color. Will produce 5 steps light/dark
+// Call @include color-shades($color-var, desired name);
+// Produces .color-name, and list/dark modifiers .color-name--l1, .color-name--d1 etc
+// @include color-shades($color-red, red);
+
+@mixin color-shades($color-var, $color-name) {
+  .color-#{$color-name} { color: $color-var}
+  @for $i from 1 through 5 {
+    .color-#{$color-name}--d#{$i} { color: darken($color-var, 10 * $i)}
+    .color-#{$color-name}--l#{$i} { color: lighten($color-var, 10 * $i)}
+  }
+}
