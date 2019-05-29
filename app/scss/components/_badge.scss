@@ -1,0 +1,56 @@
+// ORBJECTS / BADGES
+// ===============================================================================
+
+// Example
+// <em class="badge badge--pill badge--negative">Text</em>
+// <em class="badge badge--pill u-bgolor-watermelon-red">Text</em>
+
+// Vars 
+$badge-message-colour-light:     white;
+$badge-message-colour-dark:      black;
+
+$badge-success-text-color:       $badge-message-colour-light;
+$badge-success-bg-color:         $colour-positive;
+
+$badge-negative-text-color:      $badge-message-colour-light;
+$badge-negative-bg-color:        $colour-negative;
+
+$badge-warn-text-color:          $badge-message-colour-light;
+$badge-warn-bg-color:            $colour-warning;
+
+$badge-info-text-color:          $badge-message-colour-light;
+$badge-info-bg-color:            $colour-info;
+
+.badge {
+  display: inline-block;
+  padding: .35em .8em;
+  font-style: normal;
+  font-size: $base-font-size * .9;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0;
+  color: $badge-message-colour-light;
+  &--pill {
+    border-radius: 1000px;
+  }
+  &--square {
+    border-radius: 0;
+  }
+}
+
+  .badge--error,
+  .badge--negative {
+    background-color: $badge-negative-bg-color;
+  }
+  .badge--warn {
+    background-color: $badge-warn-bg-color;
+  }
+  .badge--success,
+  .badge--positive {
+    background-color: $badge-success-bg-color;
+  }
+  .badge--info {
+    background-color: $badge-info-bg-color;
+  }
