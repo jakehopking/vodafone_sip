@@ -1,0 +1,72 @@
+// Vars
+$border-color-default: $color-red;
+$border-width-default: 1px;
+
+// Base
+.border {
+  border-color: $border-color-default;
+  border-width: $border-width-default;
+  border-style: solid;
+}
+
+.border--color-gallery {
+  border-color: $color-gallery;
+}
+
+.border--color-silver {
+  border-color: $color-silver;
+}
+
+// Style modifiers
+.border--solid {
+  border-width: $border-width-default;
+  border-style: solid;
+}
+
+.border--dotted {
+  border-width: $border-width-default;
+  border-style: dotted;
+}
+
+.border--dashed {
+  border-width: $border-width-default;
+  border-style: dashed;
+}
+
+// Weight modifiers
+.border--2x {
+  border-width: $border-width-default * 2;
+}
+
+.border--3x {
+  border-width: $border-width-default * 3;
+}
+
+.border--4x {
+  border-width: $border-width-default * 4;
+}
+
+// Side modifiers
+.border--top {
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+
+.border--bottom {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-left-width: 0;
+}
+
+.border--right {
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+
+.border--left {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+}
