@@ -30,16 +30,10 @@
       <div class="header" data-js="_language">
         <div class="js-navigation js-navigation-language navigation">
           <div class="container">
-            <ul
-              class="navigation__list navigation__global navigation__hide navigation__hide--brand no-gutter--all"
-            >
+            <ul class="navigation__list navigation__global navigation__hide navigation__hide--brand no-gutter--all">
               <li class="navigation__spring">
-                <ul
-                  class="js-navigation navigation navigation__list navigation__global--type"
-                >
-                  <li
-                    class="js-navigation-item navigation__item hide--md hide--sm"
-                  >
+                <ul class="js-navigation navigation navigation__list navigation__global--type">
+                  <li class="js-navigation-item navigation__item hide--md hide--sm">
                     <a
                       href="https://www.vodafone.co.uk"
                       class="js-navigation-link navigation__link navigation__link--slim navigation__site navigation__site--active"
@@ -47,9 +41,7 @@
                       SIP
                     </a>
                   </li>
-                  <li
-                    class="js-navigation-item navigation__item hide--md hide--sm"
-                  >
+                  <li class="js-navigation-item navigation__item hide--md hide--sm">
                     <a
                       href="https://www.vodafone.co.uk/business"
                       class="js-navigation-link navigation__link navigation__link--slim navigation__site"
@@ -62,10 +54,7 @@
             </ul>
           </div>
         </div>
-        <div
-          class="js-navigation navigation navigation--primary navigation--closed"
-          data-js="_navigation"
-        >
+        <div class="js-navigation navigation navigation--primary navigation--closed" data-js="_navigation">
           <div class="container">
             <ul
               class="navigation__list navigation__spring navigation__spring--primary navigation__hide navigation__hide--icons"
@@ -81,10 +70,7 @@
               </li>
 
               <li class="js-navigation-item navigation__item hide--sm hide--md">
-                <a
-                  href="//www.vodafone.co.uk/shop/index.htm"
-                  class="js-navigation-link navigation__link"
-                >
+                <a href="//www.vodafone.co.uk/shop/index.htm" class="js-navigation-link navigation__link">
                   Home
                 </a>
               </li>
@@ -105,24 +91,18 @@
     <div class="content">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-xs-12">
             <div class="breadcrumbs breadcrumbs--sip">
               <ol class="breadcrumbs__list">
                 <li
                   class="breadcrumbs__item icon-psudo icon-psudo--after icon-psudo--fa-solid icon-psudo--fa-chevron-right"
                 >
-                  <a
-                    href="#"
-                    class="breadcrumbs__crumb breadcrumbs__crumb--first"
-                  >
+                  <a href="#" class="breadcrumbs__crumb breadcrumbs__crumb--first">
                     Home
                   </a>
                 </li>
                 <li class="breadcrumbs__item">
-                  <a
-                    href="#"
-                    class="breadcrumbs__crumb breadcrumbs__crumb--current"
-                  >
+                  <a href="#" class="breadcrumbs__crumb breadcrumbs__crumb--current">
                     Data Steward
                   </a>
                 </li>
@@ -134,7 +114,7 @@
       <!-- /.container -->
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-xs-12">
             <div class="card">
               <div class="card__header card__header--red text-center">
                 Data Steward Overview
@@ -192,18 +172,35 @@
                     </a>
                   </div>
                   <div class="tabs__content">
-                    <div
-                      class="tabs__pane"
-                      data-tab="1"
-                      style="min-height: 300px"
-                    >
-                      Pane 1
+                    <div class="tabs__pane" data-tab="1">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <p>Pane 1 - Col</p>
+                        </div>
+                        <div class="col-md-6">
+                          <p>Pane 1 - Col</p>
+                        </div>
+                      </div>
                     </div>
                     <div class="tabs__pane" data-tab="2">
-                      Pane 2
+                      <div class="row">
+                        <div class="col-md-6">
+                          <p>Pane 2 - Col</p>
+                        </div>
+                        <div class="col-md-6">
+                          <p>Pane 2 - Col</p>
+                        </div>
+                      </div>
                     </div>
                     <div class="tabs__pane" data-tab="3">
-                      Pane 3
+                      <div class="row">
+                        <div class="col-md-6">
+                          <p>Pane 3 - Col</p>
+                        </div>
+                        <div class="col-md-6">
+                          <p>Pane 3 - Col</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -220,17 +217,43 @@
               <div class="card__header card__header--red text-center">
                 Open Exceptions by type
               </div>
-              <div class="card__body card__body--alt">
-                <p>Content</p>
+              <div class="card__body card__body--alt border border--solid border--bottom border--color-silver">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card card--unstructured mar-t-1 border border--solid border--bottom border--4x">
+                      <h6 class="heading heading--6 heading--regular heading--center">
+                        Total Open Exceptions
+                      </h6>
+                      <h1 class="heading heading--1 heading--regular heading--center heading--no-gutter color-red">
+                        188
+                      </h1>
+                      <div class="media mar-x-auto">
+                        <div class="media__figure">
+                          <em class="badge badge--pill badge--positive mar-x-auto">
+                            <i class="fa fa-arrow-up"></i> 23%
+                          </em>
+                        </div>
+                        <p class="media__body mar-t-0">
+                          Monthly change
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div
+                      class="card card--unstructured mar-t-1 border border--solid border--bottom border--4x border--color-gallery"
+                    >
+                      <p>Content</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="card__body">
-                <hr class="line line--dashed" />
+                <hr class="rule rule--dashed" />
                 <div class="row">
                   <div class="col-md-6">
-                    <div class="card card--table-widget">
-                      <div
-                        class="card__header card__header--with-tools pad-b-2"
-                      >
+                    <div class="card card--table-widget mar-b-0-sm">
+                      <div class="card__header card__header--with-tools pad-b-2">
                         <div class="card__title">
                           GTOMS Order Feed Exceptions
                         </div>
@@ -244,9 +267,7 @@
                         </div>
                       </div>
                       <div class="card__body pad-b-1">
-                        <div
-                          class="table-scroll table-scroll--dash-widget table-scroll--data-steward"
-                        >
+                        <div class="table-scroll table-scroll--dash-widget table-scroll--data-steward">
                           <table>
                             <thead>
                               <tr>
@@ -260,56 +281,159 @@
                                 <td width="60%">GTOMS order type reject</td>
                                 <td width="12%">4</td>
                                 <td width="18%">
-                                  <div class="btn btn-default">View</div>
+                                  <div class="button button--primary button--full-width button--tiny">
+                                    View
+                                  </div>
                                 </td>
                               </tr>
                               <tr>
                                 <td width="60%">GTOMS order type reject</td>
                                 <td width="12%">4</td>
                                 <td width="18%">
-                                  <div class="btn btn-default">View</div>
+                                  <div class="button button--primary button--full-width button--tiny">
+                                    View
+                                  </div>
                                 </td>
                               </tr>
                               <tr>
                                 <td width="60%">GTOMS order type reject</td>
                                 <td width="12%">4</td>
                                 <td width="18%">
-                                  <div class="btn btn-default">View</div>
+                                  <div class="button button--primary button--full-width button--tiny">
+                                    View
+                                  </div>
                                 </td>
                               </tr>
                               <tr>
                                 <td width="60%">GTOMS order type reject</td>
                                 <td width="12%">4</td>
                                 <td width="18%">
-                                  <div class="btn btn-default">View</div>
+                                  <div class="button button--primary button--full-width button--tiny">
+                                    View
+                                  </div>
                                 </td>
                               </tr>
                               <tr>
                                 <td width="60%">GTOMS order type reject</td>
                                 <td width="12%">4</td>
                                 <td width="18%">
-                                  <div class="btn btn-default">View</div>
+                                  <div class="button button--primary button--full-width button--tiny">
+                                    View
+                                  </div>
                                 </td>
                               </tr>
                               <tr>
                                 <td width="60%">GTOMS order type reject</td>
                                 <td width="12%">4</td>
                                 <td width="18%">
-                                  <div class="btn btn-default">View</div>
+                                  <div class="button button--primary button--full-width button--tiny">
+                                    View
+                                  </div>
                                 </td>
                               </tr>
                             </tbody>
                           </table>
                         </div>
                       </div>
-
                       <!--/.table-scroll-->
                     </div>
+                    <!-- ./card -->
                   </div>
-                  <div class="col-md-6"></div>
+                  <!-- ./col -->
+                  <div class="col-md-6">
+                    <div class="card card--table-widget mar-b-0">
+                      <div class="card__header card__header--with-tools pad-b-2">
+                        <div class="card__title">
+                          GTOMS Order Feed Exceptions
+                        </div>
+                        <div class="card__tools">
+                          <div
+                            class="radial-progress-static tabs__nav-item__child"
+                            data-number="22"
+                            data-alertlevel="1"
+                            data-description="Exceptions Open"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="card__body pad-b-1">
+                        <div class="table-scroll table-scroll--dash-widget table-scroll--data-steward">
+                          <table>
+                            <thead>
+                              <tr>
+                                <th width="60%">Name</th>
+                                <th width="12%">Count</th>
+                                <th width="18%">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td width="60%">GTOMS order type reject</td>
+                                <td width="12%">4</td>
+                                <td width="18%">
+                                  <div class="button button--primary button--full-width button--tiny">
+                                    View
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="60%">GTOMS order type reject</td>
+                                <td width="12%">4</td>
+                                <td width="18%">
+                                  <div class="button button--primary button--full-width button--tiny">
+                                    View
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="60%">GTOMS order type reject</td>
+                                <td width="12%">4</td>
+                                <td width="18%">
+                                  <div class="button button--primary button--full-width button--tiny">
+                                    View
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="60%">GTOMS order type reject</td>
+                                <td width="12%">4</td>
+                                <td width="18%">
+                                  <div class="button button--primary button--full-width button--tiny">
+                                    View
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="60%">GTOMS order type reject</td>
+                                <td width="12%">4</td>
+                                <td width="18%">
+                                  <div class="button button--primary button--full-width button--tiny">
+                                    View
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="60%">GTOMS order type reject</td>
+                                <td width="12%">4</td>
+                                <td width="18%">
+                                  <div class="button button--primary button--full-width button--tiny">
+                                    View
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <!--/.table-scroll-->
+                    </div>
+                    <!-- /.card -->
+                  </div>
+                  <!-- ./col -->
                 </div>
-                <!-- <hr class="line line--dashed"> -->
+                <!-- /.row -->
+                <hr class="rule rule--dashed" />
               </div>
+              <!-- ./card__body -->
             </div>
           </div>
         </div>
@@ -320,8 +444,7 @@
     <footer class="footer--main">
       <div class="container">
         <p>
-          &copy; 2019 Vodafone Limited. Registered office: Vodafone House, The
-          Connection, Newbury, Berkshire RG14 2FN.
+          &copy; 2019 Vodafone Limited. Registered office: Vodafone House, The Connection, Newbury, Berkshire RG14 2FN.
           <br />
           Registered in England No 1471587.
         </p>
