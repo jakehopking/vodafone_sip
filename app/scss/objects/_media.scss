@@ -1,0 +1,57 @@
+// Example:
+// <div class="media">
+//    <img src=http://placekitten.com/200/300 alt="" class=media__figure>
+//    <p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+//    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+// </div>
+
+.media {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: $base-spacing-unit;
+
+  &:only-child {
+    margin-bottom: 0;
+  }
+}
+
+.media__figure {
+  margin-right: $base-spacing-unit;
+
+  &--half {
+    margin-right: $half-spacing-unit;
+  }
+}
+
+.media__body {
+  flex: 1;
+  position: relative;
+  margin-bottom: $base-spacing-unit;
+}
+
+.media__body:last-child {
+  margin-bottom: 0;
+}
+
+.media__title {
+  margin: 0 0 $half-spacing-unit;
+}
+
+.media--center,
+.media--centre {
+  align-items: center;
+}
+
+.media--reverse > .media__figure {
+  order: 1;
+  margin: 0 0 0 $base-spacing-unit;
+}
+
+// .media--collapse-xs {
+//   @include media(sm_d) {
+//     flex-direction: column;
+//     // align-items: flex-start;
+//     > div {
+//     }
+//   }
+// }
