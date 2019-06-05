@@ -7,9 +7,7 @@
       const tabsNav = tabNav.parentElement,
         tabsContainer = tabsNav.parentElement,
         tabId = tabNav.dataset.forTab,
-        tabPaneToActivate = tabsContainer.querySelector(
-          `.tabs__pane[data-tab="${tabId}"]`
-        );
+        tabPaneToActivate = tabsContainer.querySelector(`.tabs__pane[data-tab="${tabId}"]`);
 
       // Test
       // console.log(tabsNav);
@@ -19,11 +17,9 @@
 
       // Remove active classes
       // From tab nav items
-      tabsContainer
-        .querySelectorAll(".tabs__nav-item--active")
-        .forEach(tabNav => {
-          tabNav.classList.remove("tabs__nav-item--active");
-        });
+      tabsContainer.querySelectorAll(".tabs__nav-item--active").forEach(tabNav => {
+        tabNav.classList.remove("tabs__nav-item--active");
+      });
       // From tab pane items
       tabsContainer.querySelectorAll(".tabs__pane--active").forEach(tabPane => {
         tabPane.classList.remove("tabs__pane--active");
