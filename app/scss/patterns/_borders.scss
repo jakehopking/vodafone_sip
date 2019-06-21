@@ -9,8 +9,20 @@ $border-width-default: 1px;
   border-style: solid;
 }
 
+.border--color-blue-lagoon {
+  border-color: $color-blue-lagoon;
+}
+
+.border--color-cerulean {
+  border-color: $color-cerulean;
+}
+
 .border--color-gallery {
   border-color: $color-gallery;
+}
+
+.border--color-green {
+  border-color: $color-green;
 }
 
 .border--color-silver {

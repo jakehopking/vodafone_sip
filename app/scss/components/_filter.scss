@@ -1,0 +1,42 @@
+$filter-height:                   ($base-spacing-unit * 2.5);
+$filter-item-padding:             ($half-spacing-unit) ($base-spacing-unit);
+$filter-item-bg-color:            white;
+$filter-item-bg-color-active:     $color-red;
+$filter-item-bg-color-hover:      $filter-item-bg-color;
+$filter-item-accent-active:       3px solid darken($filter-item-bg-color-active, 3);
+$filter-item-seperator-color:     $color-wild-sand;
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  height: $filter-height;
+  font-size: 19px;
+  &__item {
+    display: flex;
+    border-left: 1px solid transparent; // Prevent jumping
+    
+    background-color: $filter-item-bg-color;
+    align-items: center;
+    a {
+      padding: $filter-item-padding;
+    }
+  }
+  &__item + &__item {
+    border-left: 1px solid $filter-item-seperator-color;
+  }
+  &__item--active {
+    height: 100%;
+    color: $filter-item-bg-color;
+    border-top: $filter-item-accent-active;
+    border-left: transparent !important;
+    background-color: $filter-item-bg-color-active;
+    &:hover {
+      background-color: $filter-item-bg-color-active;
+        a {
+        display: block;
+        color: $filter-item-bg-color;
+      }
+    }
+  }
+}

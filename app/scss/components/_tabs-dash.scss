@@ -6,7 +6,9 @@
     flex-shrink: 0;
   }
   &__nav-item {
-    &, &:hover, &:focus {
+    &,
+    &:hover,
+    &:focus {
       text-decoration: none;
     }
   }
@@ -24,6 +26,7 @@
     }
   }
 }
+
 
 .tabs--dashboard {
   flex-flow: row;
@@ -89,4 +92,3 @@
     }
   }
 }
-

@@ -30,6 +30,10 @@
     @include heading-desktop($level: 6);
   }
 
+  &--7 {
+    @include heading-desktop($level: 7);
+  }
+
   &--light {
     font-family: $font-family-vodafone-light;
   }
