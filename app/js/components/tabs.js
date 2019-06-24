@@ -1,4 +1,4 @@
-// console.log("tabs");
+console.log("Load: Tabs");
 
 (function setupTabs() {
   document.querySelectorAll(".tabs__nav-item").forEach(tabNav => {
@@ -35,4 +35,4 @@
   document.querySelectorAll(".tabs").forEach(tabNav => {
     document.querySelector(".tabs__nav-item").click();
   });
-})();
+})(); // IIFE

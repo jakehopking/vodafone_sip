@@ -4,4 +4,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Components
   require("./js/components/tabs");
+  require("./js/components/tags");
 });

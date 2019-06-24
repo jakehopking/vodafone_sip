@@ -1,0 +1,127 @@
+
+$tags-border-radius:          5px;
+$tags-item-child-padding:     4px 5px;
+$tags-text-color-default:     white;
+$tags-bg-color-default:       $color-abbey;
+
+$tags-error-text-color:       $tags-text-color-default;
+$tags-error-bg-color:         $color-red;
+
+$tags-sucess-text-color:      $tags-text-color-default;
+$tags-sucess-bg-color:        $color-green;
+
+$tags-warn-text-color:        $tags-text-color-default;
+$tags-warn-bg-color:          $color-orange;
+
+$tags-info-text-color:        $tags-text-color-default;
+$tags-info-bg-color:          $color-blue-lagoon;
+
+
+.tags {
+  position: relative;
+  width: 100%;
+  display: inline-flex;
+  flex-flow: row wrap;
+  font-size: 16px;
+}
+
+  .tags__item {
+    display: flex;
+    border-radius: $tags-border-radius;
+    border: 1px solid transparent;
+    color: $tags-text-color-default;
+    background-color: $tags-bg-color-default;
+    line-height: 1;
+    margin-bottom: 5px;
+    + .tags__item {
+      margin-left: $half-spacing-unit;
+    }
+  }
+
+    .tags__item-icon {
+      flex: 0 0 20px;
+      padding: $tags-item-child-padding;
+      background-color: darken($tags-bg-color-default, 20);
+      border-top-left-radius: $tags-border-radius - 1;
+      border-bottom-left-radius: $tags-border-radius - 1;
+      > i {
+        vertical-align: text-top;
+      }
+    }
+
+    .tags__item-label {
+      flex: 1 0 auto;
+      padding: $tags-item-child-padding;
+    }
+
+  // Modifiers
+  // Error
+  .tags__item--error {
+    background-color: $tags-error-bg-color;
+
+    .tags__item-icon {
+      background-color: darken($tags-error-bg-color, 20);
+    }
+    .tags__item-label {
+
+    }
+  }
+
+  // Successs
+  .tags__item--success {
+    background-color: $tags-sucess-bg-color;
+
+    .tags__item-icon {
+      background-color: darken($tags-sucess-bg-color, 20);
+    }
+    .tags__item-label {
+
+    }
+  }
+
+  // Warn
+  .tags__item--warn {
+    background-color: $tags-warn-bg-color;
+
+    .tags__item-icon {
+      background-color: darken($tags-warn-bg-color, 20);
+    }
+    .tags__item-label {
+
+    }
+  }
+
+  // Info
+  .tags__item--info {
+    background-color: $tags-info-bg-color;
+
+    .tags__item-icon {
+      background-color: darken($tags-info-bg-color, 20);
+    }
+    .tags__item-label {
+
+    }
+  }
+
+  // Fill
+  .tags__item--fill {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+// Auto fill
+.tags--auto-fill {
+  > .tags__item {
+  flex-grow: 1;
+  // + .tags__item {
+  //   margin-left: 0;
+  // }
+  }
+}
+
+.tags--column {
+  flex-flow: column;
+  > .tags__item {
+    margin-left: 0;
+  }
+}
