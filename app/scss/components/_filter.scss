@@ -8,12 +8,14 @@ $filter-item-seperator-color:     $color-wild-sand;
 
 .filter {
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+  align-items: flex-start;
+  flex-flow: row wrap;
   height: $filter-height;
   font-size: 19px;
   &__item {
     display: flex;
+    height: 100%;
+    width: 50%;
     border-left: 1px solid transparent; // Prevent jumping
     
     background-color: $filter-item-bg-color;
@@ -37,6 +39,18 @@ $filter-item-seperator-color:     $color-wild-sand;
         display: block;
         color: $filter-item-bg-color;
       }
+    }
+  }
+}
+
+
+@media only screen and (min-width: $breakpoint-desktop) {
+  .filter {
+    align-items: flex-end;
+
+    &__item {
+      height: auto;
+      width: auto;
     }
   }
 }
