@@ -14,7 +14,11 @@ exports.plugins = {
   copycat: {
     // fonts: ["node_modules/bootstrap/dist/fonts"],
     onlyChanged: true
-  }
+  },
+  styles: {
+    // bootstrap: ["dist/css/bootstrap.css"]
+  },
+  sass: { options: { includePaths: ["node_modules/"] } }
 };
 
 exports.npm = {
@@ -23,9 +27,5 @@ exports.npm = {
     jQuery: "jquery",
     $: "jquery",
     bootstrap: "bootstrap"
-  },
-  styles: {
-    // bootstrap: ["dist/css/bootstrap.css"]
-  },
-  sass: { options: { includePaths: ["node_modules/"] } }
+  }
 };

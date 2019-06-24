@@ -1,8 +1,8 @@
 {
-  "name": "brunch-app",
-  "description": "Brunch.io application",
+  "name": "vodafone-sip",
+  "description": "Vodafone SIP - Front-end framework",
   "private": true,
-  "author": "Brunch",
+  "author": "Jake Hopking",
   "version": "0.0.1",
   "repository": "",
   "scripts": {
