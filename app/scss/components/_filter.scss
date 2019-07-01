@@ -3,7 +3,7 @@ $filter-item-padding:             ($half-spacing-unit) ($half-spacing-unit);
 $filter-item-bg-color:            white;
 $filter-item-bg-color-active:     $color-red;
 $filter-item-bg-color-hover:      $filter-item-bg-color;
-$filter-item-accent-active:       3px solid darken($filter-item-bg-color-active, 3);
+$filter-item-accent-active:       5px solid $filter-item-bg-color-active;
 $filter-item-seperator-color:     $color-wild-sand;
 
 .filter {
@@ -40,6 +40,8 @@ $filter-item-seperator-color:     $color-wild-sand;
     border-top: $filter-item-accent-active;
     border-left: transparent !important;
     background-color: $filter-item-bg-color-active;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
     &:hover {
         a {
         display: block;
