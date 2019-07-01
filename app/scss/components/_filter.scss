@@ -1,5 +1,5 @@
 $filter-height:                   ($base-spacing-unit * 2.5);
-$filter-item-padding:             ($half-spacing-unit) ($base-spacing-unit);
+$filter-item-padding:             ($half-spacing-unit) ($half-spacing-unit);
 $filter-item-bg-color:            white;
 $filter-item-bg-color-active:     $color-red;
 $filter-item-bg-color-hover:      $filter-item-bg-color;
@@ -46,6 +46,19 @@ $filter-item-seperator-color:     $color-wild-sand;
         color: $filter-item-bg-color;
         background-color: $filter-item-bg-color-active;
       }
+    }
+  }
+}
+
+.filter--justify {
+  justify-content: space-between;
+
+  .filter__item {
+    flex-grow: 1;
+    a {
+      width: 100%;
+      text-align: center;
+      // padding: $half-spacing-unit;
     }
   }
 }
