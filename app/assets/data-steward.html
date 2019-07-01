@@ -27,12 +27,8 @@
       integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
       crossorigin="anonymous"
     />
-    <!-- Latest compiled and minified JavaScript -->
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-      crossorigin="anonymous"
-    ></script>
+
+    <!-- BS JS at bottom -->
 
     <link rel="stylesheet" href="/app.css" />
     <script src="/vendor.js"></script>
@@ -49,109 +45,109 @@
     <![endif]-->
   </head>
   <body>
-      <header>
-        <div class="header" data-js="_language">
-          <div class="navigation navigation--primary">
-            <div class="container">
-              <nav class="head-nav">
-                <a href="#"><img class="head-nav__logo" src="images/img_vodafone__icon.svg" alt="Vodafone logo"/></a>
-                <label for="head-nav__toggle" class="head-nav__toggle-menu"
-                  ><span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-hamburger"></i></span
-                ></label>
-                <input type="checkbox" id="head-nav__toggle" />
-                <ul class="head-nav__main-menu">
-                  <!-- <li><a href="javascript:void(0)">Home</a></li> -->
-                  <li class="head-nav__list-item">
-                    <a href="javascript:void(0)"
-                      >All Assets
-                      <span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-down"></i></span>
-                      <label title="Toggle Drop-down" class="head-nav__menu-icon" for="smAA01"
-                        ><i class="glyphicon glyphicon-menu-down"></i
-                      ></label>
-                    </a>
-                    <input type="checkbox" id="smAA01" />
-                    <ul class="head-nav__sub-menu">
-                      <li><a href="javascript:void(0)">Access Circuits</a></li>
-                      <li><a href="javascript:void(0)">Cross Connect</a></li>
-                    </ul>
-                  </li>
-                  <li class="head-nav__list-item">
-                    <a href="javascript:void(0)"
-                      >Reports
-                      <span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-down"></i></span>
-                      <label title="Toggle Drop-down" class="head-nav__menu-icon" for="smR01"
-                        ><i class="glyphicon glyphicon-menu-down"></i
-                      ></label>
-                    </a>
-                    <input type="checkbox" id="smR01" />
-                    <ul class="head-nav__sub-menu">
-                      <li><a href="javascript:void(0)">Supplier Circuit Report</a></li>
-                      <li><a href="javascript:void(0)">Customer Circuit Report</a></li>
-                      <li><a href="javascript:void(0)">On-Net - OLO Circuit Matching report</a></li>
-                      <li><a href="javascript:void(0)">Supplier Summary Report</a></li>
-                      <li><a href="javascript:void(0)">Customer Summary Report</a></li>
-                      <li><a href="javascript:void(0)">Cross Connect and its Associated Circuit</a></li>
-                      <li><a href="javascript:void(0)">CPE &amp; Associated Circuit Report</a></li>
-                      <li><a href="javascript:void(0)">CPE Cost Report</a></li>
-                      <li><a href="javascript:void(0)">Hard Change - Asset details</a></li>
-                    </ul>
-                  </li>
-                  <li class="head-nav__list-item">
-                    <a href="javascript:void(0)">Supplier Catalogue </a>
-                  </li>
-                  <li class="head-nav__list-item head-nav__list-item--active">
-                    <a href="javascript:void(0)"
-                      >Data Steward
-                      <span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-down"></i></span>
-                      <label title="Toggle Drop-down" class="head-nav__menu-icon" for="smDS01"
-                        ><i class="glyphicon glyphicon-menu-down"></i
-                      ></label>
-                    </a>
-                    <input type="checkbox" id="smDS01" />
-                    <ul class="head-nav__sub-menu">
-                      <li><a href="javascript:void(0)">Migrate &amp; Refresh Exceptions</a></li>
-                    </ul>
-                  </li>
-                  <li class="head-nav__list-item">
-                    <a href="javascript:void(0)"
-                      >PO Renewals/Extension
-                      <span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-down"></i></span>
-                      <label title="Toggle Drop-down" class="head-nav__menu-icon" for="smPO01"
-                        ><i class="glyphicon glyphicon-menu-down"></i
-                      ></label>
-                    </a>
-                    <input type="checkbox" id="smPO01" />
-                    <ul class="head-nav__sub-menu">
-                      <li><a href="javascript:void(0)">Bulk Supplier Renewals</a></li>
-                      <li><a href="javascript:void(0)">Non-Bulk Supplier Renewals</a></li>
-                      <li><a href="javascript:void(0)">Customer Circuit Report</a></li>
-                      <li><a href="javascript:void(0)">PO Extension Requests</a></li>
-                      <li><a href="javascript:void(0)">Load Exchange Rates</a></li>
-                      <li><a href="javascript:void(0)">Capture Revenue Info</a></li>
-                      <li><a href="javascript:void(0)">Enterprise Finance Details</a></li>
-                    </ul>
-                  </li>
-                  <li class="head-nav__list-item head-nav__list-item--account">
-                    <a href="javascript:void(0)"
-                      >JH
-                      <span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-down"></i></span>
-                      <label title="Toggle Drop-down" class="head-nav__menu-icon" for="smAC01"
-                        ><i class="glyphicon glyphicon-menu-down"></i
-                      ></label>
-                    </a>
-                    <input type="checkbox" id="smAC01" />
-                    <ul class="head-nav__sub-menu head-nav__sub-menu--right">
-                      <li><a href="javascript:void(0)">Edit account</a></li>
-                      <li><a href="javascript:void(0)">Logout</a></li>
-                      <li><a href="javascript:void(0)">Help</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+    <header>
+      <div class="header" data-js="_language">
+        <div class="navigation navigation--primary">
+          <div class="container">
+            <nav class="head-nav">
+              <a href="#"><img class="head-nav__logo" src="images/img_vodafone__icon.svg" alt="Vodafone logo"/></a>
+              <label for="head-nav__toggle" class="head-nav__toggle-menu"
+                ><span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-hamburger"></i></span
+              ></label>
+              <input type="checkbox" id="head-nav__toggle" />
+              <ul class="head-nav__main-menu">
+                <!-- <li><a href="javascript:void(0)">Home</a></li> -->
+                <li class="head-nav__list-item">
+                  <a href="javascript:void(0)"
+                    >All Assets
+                    <span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-down"></i></span>
+                    <label title="Toggle Drop-down" class="head-nav__menu-icon" for="smAA01"
+                      ><i class="glyphicon glyphicon-menu-down"></i
+                    ></label>
+                  </a>
+                  <input type="checkbox" id="smAA01" />
+                  <ul class="head-nav__sub-menu">
+                    <li><a href="javascript:void(0)">Access Circuits</a></li>
+                    <li><a href="javascript:void(0)">Cross Connect</a></li>
+                  </ul>
+                </li>
+                <li class="head-nav__list-item">
+                  <a href="javascript:void(0)"
+                    >Reports
+                    <span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-down"></i></span>
+                    <label title="Toggle Drop-down" class="head-nav__menu-icon" for="smR01"
+                      ><i class="glyphicon glyphicon-menu-down"></i
+                    ></label>
+                  </a>
+                  <input type="checkbox" id="smR01" />
+                  <ul class="head-nav__sub-menu">
+                    <li><a href="javascript:void(0)">Supplier Circuit Report</a></li>
+                    <li><a href="javascript:void(0)">Customer Circuit Report</a></li>
+                    <li><a href="javascript:void(0)">On-Net - OLO Circuit Matching report</a></li>
+                    <li><a href="javascript:void(0)">Supplier Summary Report</a></li>
+                    <li><a href="javascript:void(0)">Customer Summary Report</a></li>
+                    <li><a href="javascript:void(0)">Cross Connect and its Associated Circuit</a></li>
+                    <li><a href="javascript:void(0)">CPE &amp; Associated Circuit Report</a></li>
+                    <li><a href="javascript:void(0)">CPE Cost Report</a></li>
+                    <li><a href="javascript:void(0)">Hard Change - Asset details</a></li>
+                  </ul>
+                </li>
+                <li class="head-nav__list-item">
+                  <a href="javascript:void(0)">Supplier Catalogue </a>
+                </li>
+                <li class="head-nav__list-item head-nav__list-item--active">
+                  <a href="javascript:void(0)"
+                    >Data Steward
+                    <span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-down"></i></span>
+                    <label title="Toggle Drop-down" class="head-nav__menu-icon" for="smDS01"
+                      ><i class="glyphicon glyphicon-menu-down"></i
+                    ></label>
+                  </a>
+                  <input type="checkbox" id="smDS01" />
+                  <ul class="head-nav__sub-menu">
+                    <li><a href="javascript:void(0)">Migrate &amp; Refresh Exceptions</a></li>
+                  </ul>
+                </li>
+                <li class="head-nav__list-item">
+                  <a href="javascript:void(0)"
+                    >PO Renewals/Extension
+                    <span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-down"></i></span>
+                    <label title="Toggle Drop-down" class="head-nav__menu-icon" for="smPO01"
+                      ><i class="glyphicon glyphicon-menu-down"></i
+                    ></label>
+                  </a>
+                  <input type="checkbox" id="smPO01" />
+                  <ul class="head-nav__sub-menu">
+                    <li><a href="javascript:void(0)">Bulk Supplier Renewals</a></li>
+                    <li><a href="javascript:void(0)">Non-Bulk Supplier Renewals</a></li>
+                    <li><a href="javascript:void(0)">Customer Circuit Report</a></li>
+                    <li><a href="javascript:void(0)">PO Extension Requests</a></li>
+                    <li><a href="javascript:void(0)">Load Exchange Rates</a></li>
+                    <li><a href="javascript:void(0)">Capture Revenue Info</a></li>
+                    <li><a href="javascript:void(0)">Enterprise Finance Details</a></li>
+                  </ul>
+                </li>
+                <li class="head-nav__list-item head-nav__list-item--account">
+                  <a href="javascript:void(0)"
+                    >JH
+                    <span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-down"></i></span>
+                    <label title="Toggle Drop-down" class="head-nav__menu-icon" for="smAC01"
+                      ><i class="glyphicon glyphicon-menu-down"></i
+                    ></label>
+                  </a>
+                  <input type="checkbox" id="smAC01" />
+                  <ul class="head-nav__sub-menu head-nav__sub-menu--right">
+                    <li><a href="javascript:void(0)">Edit account</a></li>
+                    <li><a href="javascript:void(0)">Logout</a></li>
+                    <li><a href="javascript:void(0)">Help</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
 
     <div class="content">
       <div class="container">
@@ -515,5 +511,11 @@
         </p>
       </div>
     </footer>
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

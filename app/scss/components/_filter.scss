@@ -22,7 +22,14 @@ $filter-item-seperator-color:     $color-wild-sand;
     align-items: center;
     a {
       padding: $filter-item-padding;
+      text-decoration: none;
+      &:hover {
+        background-color: rgb(255, 209, 209);
+        // color: black;
+        // color: white;
+      }
     }
+    
   }
   &__item + &__item {
     border-left: 1px solid $filter-item-seperator-color;
@@ -34,10 +41,10 @@ $filter-item-seperator-color:     $color-wild-sand;
     border-left: transparent !important;
     background-color: $filter-item-bg-color-active;
     &:hover {
-      background-color: $filter-item-bg-color-active;
         a {
         display: block;
         color: $filter-item-bg-color;
+        background-color: $filter-item-bg-color-active;
       }
     }
   }

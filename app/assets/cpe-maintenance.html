@@ -27,12 +27,7 @@
       integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
       crossorigin="anonymous"
     />
-    <!-- Latest compiled and minified JavaScript -->
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-      crossorigin="anonymous"
-    ></script>
+    <!-- BS JS at bottom -->
 
     <link rel="stylesheet" href="/app.css" />
     <script src="/vendor.js"></script>
@@ -282,17 +277,20 @@
         <div class="row">
           <div class="col-md-12">
             <div class="filter">
+              <div class="filter__item">
+                <a href="javascript:void(0)">Match - Active</a>
+              </div>
+              <div class="filter__item ">
+                <a href="javascript:void(0)">Match - Cease</a>
+              </div>
               <div class="filter__item filter__item--active">
-                <a href="javascript:void(0)">Manage Exceptions</a>
+                <a href="javascript:void(0)">Match - Supplier Mismatch</a>
               </div>
               <div class="filter__item ">
-                <a href="javascript:void(0)">Manage Results</a>
+                <a href="javascript:void(0)">No Match - Not present in Quote</a>
               </div>
               <div class="filter__item ">
-                <a href="javascript:void(0)">Generate Renewals</a>
-              </div>
-              <div class="filter__item ">
-                <a href="javascript:void(0)">Filter Four</a>
+                <a href="javascript:void(0)">No Match - Not present in Inventory</a>
               </div>
             </div>
           </div>
@@ -407,5 +405,11 @@
         </p>
       </div>
     </footer>
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
