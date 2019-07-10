@@ -1,9 +1,10 @@
-$filter-height:                   ($base-spacing-unit * 2.5);
+$filter-height:                   auto;
 $filter-item-padding:             ($half-spacing-unit) ($half-spacing-unit);
 $filter-item-bg-color:            white;
 $filter-item-bg-color-active:     $color-red;
 $filter-item-bg-color-hover:      $filter-item-bg-color;
-$filter-item-accent-active:       5px solid $filter-item-bg-color-active;
+$filter-item-accent-active:       none;
+// $filter-item-accent-active:       5px solid $filter-item-bg-color-active;
 $filter-item-seperator-color:     $color-wild-sand;
 
 .filter {
@@ -20,9 +21,11 @@ $filter-item-seperator-color:     $color-wild-sand;
     
     background-color: $filter-item-bg-color;
     align-items: center;
+    align-self: normal;
     a {
       padding: $filter-item-padding;
       text-decoration: none;
+      height: 100%;
       &:hover {
         background-color: rgb(255, 209, 209);
         // color: black;
