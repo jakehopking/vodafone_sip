@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vodafone SIP: Portal</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap 3.4.1 CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous"
+    />
+
+    <!-- BS JS at bottom -->
+
+    <link rel="stylesheet" href="app.css" />
+    <script src="vendor.js"></script>
+    <script src="app.js"></script>
+    <script>
+      require("initialize");
+    </script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <div class="header" data-js="_language">
+        <div class="navigation navigation--primary">
+          <div class="container">
+            <nav class="head-nav">
+              <a href="#"><img class="head-nav__logo" src="images/img_vodafone__icon.svg" alt="Vodafone logo"/></a>
+              <label for="head-nav__toggle" class="head-nav__toggle-menu"
+                ><span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-hamburger"></i></span
+              ></label>
+              <input type="checkbox" id="head-nav__toggle" />
+              <ul class="head-nav__main-menu">
+                <!-- <li><a href="javascript:void(0)">Home</a></li> -->
+                <li class="head-nav__list-item">
+                  <a href="javascript:void(0)"
+                    >All Assets
+                    <span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-down"></i></span>
+                    <label title="Toggle Drop-down" class="head-nav__menu-icon" for="smAA01"
+                      ><i class="glyphicon glyphicon-menu-down"></i
+                    ></label>
+                  </a>
+                  <input type="checkbox" id="smAA01" />
+                  <ul class="head-nav__sub-menu">
+                    <li><a href="javascript:void(0)">Access Circuits</a></li>
+                    <li><a href="javascript:void(0)">Cross Connect</a></li>
+                  </ul>
+                </li>
+                <li class="head-nav__list-item">
+                  <a href="javascript:void(0)"
+                    >Reports
+                    <span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-down"></i></span>
+                    <label title="Toggle Drop-down" class="head-nav__menu-icon" for="smR01"
+                      ><i class="glyphicon glyphicon-menu-down"></i
+                    ></label>
+                  </a>
+                  <input type="checkbox" id="smR01" />
+                  <ul class="head-nav__sub-menu">
+                    <li><a href="javascript:void(0)">Supplier Circuit Report</a></li>
+                    <li><a href="javascript:void(0)">Customer Circuit Report</a></li>
+                    <li><a href="javascript:void(0)">On-Net - OLO Circuit Matching report</a></li>
+                    <li><a href="javascript:void(0)">Supplier Summary Report</a></li>
+                    <li><a href="javascript:void(0)">Customer Summary Report</a></li>
+                    <li><a href="javascript:void(0)">Cross Connect and its Associated Circuit</a></li>
+                    <li><a href="javascript:void(0)">CPE &amp; Associated Circuit Report</a></li>
+                    <li><a href="javascript:void(0)">CPE Cost Report</a></li>
+                    <li><a href="javascript:void(0)">Hard Change - Asset details</a></li>
+                  </ul>
+                </li>
+                <li class="head-nav__list-item head-nav__list-item--active">
+                  <a href="javascript:void(0)">Supplier Catalogue </a>
+                </li>
+                <li class="head-nav__list-item">
+                  <a href="javascript:void(0)"
+                    >Data Steward
+                    <span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-down"></i></span>
+                    <label title="Toggle Drop-down" class="head-nav__menu-icon" for="smDS01"
+                      ><i class="glyphicon glyphicon-menu-down"></i
+                    ></label>
+                  </a>
+                  <input type="checkbox" id="smDS01" />
+                  <ul class="head-nav__sub-menu">
+                    <li><a href="javascript:void(0)">Migrate &amp; Refresh Exceptions</a></li>
+                  </ul>
+                </li>
+                <li class="head-nav__list-item">
+                  <a href="javascript:void(0)"
+                    >PO Renewals/Extension
+                    <span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-down"></i></span>
+                    <label title="Toggle Drop-down" class="head-nav__menu-icon" for="smPO01"
+                      ><i class="glyphicon glyphicon-menu-down"></i
+                    ></label>
+                  </a>
+                  <input type="checkbox" id="smPO01" />
+                  <ul class="head-nav__sub-menu">
+                    <li><a href="javascript:void(0)">Bulk Supplier Renewals</a></li>
+                    <li><a href="javascript:void(0)">Non-Bulk Supplier Renewals</a></li>
+                    <li><a href="javascript:void(0)">Customer Circuit Report</a></li>
+                    <li><a href="javascript:void(0)">PO Extension Requests</a></li>
+                    <li><a href="javascript:void(0)">Load Exchange Rates</a></li>
+                    <li><a href="javascript:void(0)">Capture Revenue Info</a></li>
+                    <li><a href="javascript:void(0)">Enterprise Finance Details</a></li>
+                  </ul>
+                </li>
+                <li class="head-nav__list-item head-nav__list-item--account">
+                  <a href="javascript:void(0)"
+                    >JH
+                    <span class="head-nav__menu-icon"><i class="glyphicon glyphicon-menu-down"></i></span>
+                    <label title="Toggle Drop-down" class="head-nav__menu-icon" for="smAC01"
+                      ><i class="glyphicon glyphicon-menu-down"></i
+                    ></label>
+                  </a>
+                  <input type="checkbox" id="smAC01" />
+                  <ul class="head-nav__sub-menu head-nav__sub-menu--right">
+                    <li><a href="javascript:void(0)">Edit account</a></li>
+                    <li><a href="javascript:void(0)">Logout</a></li>
+                    <li><a href="javascript:void(0)">Help</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="breadcrumbs breadcrumbs--sip">
+              <ol class="breadcrumbs__list">
+                <li
+                  class="breadcrumbs__item icon-psudo icon-psudo--after icon-psudo--fa-solid icon-psudo--fa-chevron-right"
+                >
+                  <a href="#" class="breadcrumbs__crumb breadcrumbs__crumb--first">
+                    Home
+                  </a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__crumb breadcrumbs__crumb--current">
+                    Supplier Catalogue
+                  </a>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="card">
+              <div class="card__header card__header--red text-center">
+                Supplier Catalogue Actions
+              </div>
+              <div class="card__body pad-1">
+                <div class="row">
+                  <div class="col-xs-12 col-md-4">
+                    <a href="javascript:void(0)" class="action-button mar-b-1-sm mar-b-0-md">
+                      <div class="action-button__label heading--5">Create Product</div>
+                      <div class="action-button__icon-container">
+                        <img class="action-button__icon" src="images/icon__create.png" alt="" />
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-xs-12 col-md-4">
+                    <a href="javascript:void(0)" class="action-button mar-b-1-sm mar-b-0-md">
+                      <div class="action-button__label heading--5">Modify Product</div>
+                      <div class="action-button__icon-container">
+                        <img class="action-button__icon" src="images/icon__modiify.png" alt="" />
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-xs-12 col-md-4">
+                    <a href="javascript:void(0)" class="action-button mar-b-0-md">
+                      <div class="action-button__label heading--5">View Catalogue</div>
+                      <div class="action-button__icon-container">
+                        <img class="action-button__icon" src="images/icon__search.png" alt="" />
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card__header card__header--red text-center">
+                Supplier Overview
+              </div>
+              <div class="card__body">
+                <hr class="rule rule--dashed" />
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card card--table-widget mar-b-0-sm">
+                      <div class="card__header card__header--with-tools pad-b-2">
+                        <div class="card__title">
+                          Supplier Status
+                        </div>
+                        <div class="card__tools">
+                          <div
+                            class="radial-progress-static tabs__nav-item__child"
+                            data-number="522"
+                            data-alertlevel="1"
+                            data-description="Total Suppliers"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="card__body pad-b-1">
+                        <div class="table-scroll table-scroll--supplier-catelogue">
+                          <table>
+                            <thead>
+                              <tr>
+                                <th width="60%">Type</th>
+                                <th width="12%">Count</th>
+                                <th width="18%">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td width="60%">Total Suppliers</td>
+                                <td width="12%">522</td>
+                                <td width="18%">
+                                  <a
+                                    href="javascript:void(0)"
+                                    class="button button--primary button--full-width button--tiny"
+                                  >
+                                    View
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="60%">Active</td>
+                                <td width="12%">44</td>
+                                <td width="18%">
+                                  <a
+                                    href="javascript:void(0)"
+                                    class="button button--primary button--full-width button--tiny"
+                                  >
+                                    View
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="60%">Stop Buy</td>
+                                <td width="12%">14</td>
+                                <td width="18%">
+                                  <a
+                                    href="javascript:void(0)"
+                                    class="button button--primary button--full-width button--tiny"
+                                  >
+                                    View
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="60%">Pending</td>
+                                <td width="12%">23</td>
+                                <td width="18%">
+                                  <a
+                                    href="javascript:void(0)"
+                                    class="button button--primary button--full-width button--tiny"
+                                  >
+                                    View
+                                  </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <!--/.table-scroll-->
+                    </div>
+                    <!-- ./card -->
+                  </div>
+                  <!-- ./col -->
+                  <div class="col-md-6">
+                    <div class="card card--table-widget mar-b-0 mar-t-1-sm mar-t-0-md">
+                      <div class="card__header card__header--with-tools pad-b-2">
+                        <div class="card__title">
+                          Supplier Product Status
+                        </div>
+                        <div class="card__tools">
+                          <div
+                            class="radial-progress-static tabs__nav-item__child"
+                            data-number="822"
+                            data-alertlevel="1"
+                            data-description="Total Products"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="card__body pad-b-1">
+                        <div class="table-scroll table-scroll--supplier-catelogue">
+                          <table>
+                            <thead>
+                              <tr>
+                                <th width="60%">Type</th>
+                                <th width="12%">Count</th>
+                                <th width="18%">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td width="60%">Total Products</td>
+                                <td width="12%">822</td>
+                                <td width="18%">
+                                  <a
+                                    href="javascript:void(0)"
+                                    class="button button--primary button--full-width button--tiny"
+                                  >
+                                    View
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="60%">Active</td>
+                                <td width="12%">44</td>
+                                <td width="18%">
+                                  <a
+                                    href="javascript:void(0)"
+                                    class="button button--primary button--full-width button--tiny"
+                                  >
+                                    View
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="60%">Stop Sell</td>
+                                <td width="12%">14</td>
+                                <td width="18%">
+                                  <a
+                                    href="javascript:void(0)"
+                                    class="button button--primary button--full-width button--tiny"
+                                  >
+                                    View
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="60%">Retire</td>
+                                <td width="12%">23</td>
+                                <td width="18%">
+                                  <a
+                                    href="javascript:void(0)"
+                                    class="button button--primary button--full-width button--tiny"
+                                  >
+                                    View
+                                  </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <!--/.table-scroll-->
+                    </div>
+                    <!-- ./card -->
+                  </div>
+                  <!-- ./col -->
+                </div>
+                <!-- /.row -->
+                <hr class="rule rule--dashed" />
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card card--table-widget mar-b-1-sm mar-b-0-md">
+                      <div class="card__header card__header--with-tools pad-b-2">
+                        <div class="card__title">
+                          Weekly Summary
+                        </div>
+                      </div>
+                      <div class="card__body pad-b-1">
+                        <div class="table-scroll table-scroll--supplier-catelogue">
+                          <table>
+                            <thead>
+                              <tr>
+                                <th width="60%">Type</th>
+                                <th width="12%">Count</th>
+                                <th width="18%">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td width="60%">Products Created</td>
+                                <td width="12%">42</td>
+                                <td width="18%">
+                                  <a
+                                    href="javascript:void(0)"
+                                    class="button button--primary button--full-width button--tiny"
+                                  >
+                                    View
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="60%">Products Modified</td>
+                                <td width="12%">72</td>
+                                <td width="18%">
+                                  <a
+                                    href="javascript:void(0)"
+                                    class="button button--primary button--full-width button--tiny"
+                                  >
+                                    View
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="60%">User Logins</td>
+                                <td width="12%">14</td>
+                                <td width="18%">
+                                  <a
+                                    href="javascript:void(0)"
+                                    class="button button--primary button--full-width button--tiny"
+                                  >
+                                    View
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="60%">User Actions</td>
+                                <td width="12%">233</td>
+                                <td width="18%">
+                                  <a
+                                    href="javascript:void(0)"
+                                    class="button button--primary button--full-width button--tiny"
+                                  >
+                                    View
+                                  </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <!--/.table-scroll-->
+                    </div>
+                    <!-- ./card -->
+                  </div>
+                  <!-- ./col -->
+                  <div class="col-md-3 col-xs-6">
+                    <div
+                      class="card card--unstructured mar-y-0 border border--solid border--bottom border--4x card--ds-metric"
+                    >
+                      <h6 class="heading heading--6 heading--regular heading--center">
+                        Total EVO Vendors
+                      </h6>
+                      <h1 class="heading heading--1 heading--regular heading--center heading--no-gutter color-red">
+                        332
+                      </h1>
+                      <a
+                        href="javascript:void(0)"
+                        class="button button--primary button--full-width button--tiny mar-t-1"
+                      >
+                        View
+                      </a>
+                    </div>
+                  </div>
+                  <!-- ./col -->
+                  <div class="col-md-3 col-xs-6">
+                    <div
+                      class="card card--unstructured mar-y-0 border border--solid border--bottom border--4x card--ds-metric"
+                    >
+                      <h6 class="heading heading--6 heading--regular heading--center">
+                        Total VCS Carriers
+                      </h6>
+                      <h1 class="heading heading--1 heading--regular heading--center heading--no-gutter color-red">
+                        644
+                      </h1>
+                      <a
+                        href="javascript:void(0)"
+                        class="button button--primary button--full-width button--tiny mar-t-1"
+                      >
+                        View
+                      </a>
+                    </div>
+                  </div>
+                  <!-- ./col -->
+                </div>
+                <!-- /.row -->
+                <hr class="rule rule--dashed" />
+              </div>
+              <!-- ./card__body -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-8">
+            <div class="card">
+              <div class="card__header card__header--red text-center">
+                Create
+              </div>
+              <div class="card__body pad-1">
+                <div class="row">
+                  <div class="col-xs-12 col-md-6">
+                    <div
+                      class="card mar-b-1-sm mar-b-0-md border border--solid border--bottom border--4x card--ds-create-list"
+                    >
+                      <div class="card__header card__header--wild-sand">
+                        VCS Carrier
+                      </div>
+                      <div class="card__body pad-1">
+                        <ul class="link-list-group">
+                          <li class="link-list-group__item">
+                            <a href="javascript:void(0)"
+                              >Create VCS Carrier <i class="glyphicon glyphicon-chevron-right"></i
+                            ></a>
+                          </li>
+                          <li class="link-list-group__item">
+                            <a href="javascript:void(0)"
+                              >Create/View Company Code<i class="glyphicon glyphicon-chevron-right"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                    <div class="card mar-b-0 border border--solid border--bottom border--4x card--ds-create-list">
+                      <div class="card__header card__header--wild-sand">
+                        Master Data
+                      </div>
+                      <div class="card__body pad-1">
+                        <ul class="link-list-group">
+                          <li class="link-list-group__item">
+                            <a href="javascript:void(0)"
+                              >Create Bandwidth <i class="glyphicon glyphicon-chevron-right"></i
+                            ></a>
+                          </li>
+                          <li class="link-list-group__item">
+                            <a href="javascript:void(0)"
+                              >Create Last Mile Tech<i class="glyphicon glyphicon-chevron-right"></i
+                            ></a>
+                          </li>
+                          <li class="link-list-group__item">
+                            <a href="javascript:void(0)">Create MTU<i class="glyphicon glyphicon-chevron-right"></i></a>
+                          </li>
+                          <li class="link-list-group__item">
+                            <a href="javascript:void(0)">Create POP<i class="glyphicon glyphicon-chevron-right"></i></a>
+                          </li>
+                          <li class="link-list-group__item">
+                            <a href="javascript:void(0)"
+                              >Create Region<i class="glyphicon glyphicon-chevron-right"></i
+                            ></a>
+                          </li>
+                          <li class="link-list-group__item">
+                            <a href="javascript:void(0)"
+                              >Create Service Type<i class="glyphicon glyphicon-chevron-right"></i
+                            ></a>
+                          </li>
+                          <li class="link-list-group__item">
+                            <a href="javascript:void(0)"
+                              >Create Termination Type<i class="glyphicon glyphicon-chevron-right"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-xs-12 col-md-4">
+            <div class="card">
+              <div class="card__header card__header--red text-center">
+                Tools
+              </div>
+              <div class="card__body pad-1">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="card">
+                      <div class="card__header card__header--wild-sand">
+                        Products Drafted by Me
+                      </div>
+                      <div class="card__body pad-1">
+                        <ul class="link-list-group">
+                          <li class="link-list-group__item">
+                            <a href="javascript:void(0)"
+                              >View your draft products <i class="glyphicon glyphicon-chevron-right"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12">
+                    <div class="card">
+                      <div class="card__header card__header--wild-sand">
+                        Reports by Individual
+                      </div>
+                      <div class="card__body pad-1">
+                        <ul class="link-list-group">
+                          <li class="link-list-group__item">
+                            <a href="javascript:void(0)"
+                              >View your created/draft products <i class="glyphicon glyphicon-chevron-right"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12">
+                    <div class="card mar-b-0">
+                      <div class="card__header card__header--wild-sand">
+                        Bulk Upload
+                      </div>
+                      <div class="card__body pad-1">
+                        <ul class="link-list-group">
+                          <li class="link-list-group__item">
+                            <a href="javascript:void(0)"
+                              >Download data template <i class="glyphicon glyphicon-chevron-right"></i
+                            ></a>
+                          </li>
+                          <li class="link-list-group__item">
+                            <a href="javascript:void(0)"
+                              >Upload data <i class="glyphicon glyphicon-chevron-right"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.content -->
+
+    <footer class="footer--main">
+      <div class="container">
+        <p>
+          &copy; 2019 Vodafone Limited. Registered office: Vodafone House, The Connection, Newbury, Berkshire RG14 2FN.
+          <br />
+          Registered in England No 1471587.
+        </p>
+      </div>
+    </footer>
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
