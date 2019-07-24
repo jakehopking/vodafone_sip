@@ -78,6 +78,18 @@ $ts-td-border:                  1px dotted #E6E6E6;
   }
 }
 
+.table-scroll--supplier-catelogue {
+  margin-top: -$ts-head-height-default;
+  table {
+    thead {
+
+    }
+    tbody {
+      height: unset;
+    }
+  }
+}
+
 .table-scroll--data-steward {
   table {
     thead {

@@ -68,6 +68,10 @@ $small-card-padding-x:                    0 ($half-spacing-unit);
     }
   }
 
+  .card__header--wild-sand {
+    background-color: $color-wild-sand;
+  }
+
     // Header with tools
     
   // Body
@@ -132,4 +136,16 @@ a.card--link-tile {
     background-color: $color-wild-sand;
   }
   border: 1px solid $color-silver;
+}
+
+
+
+@media only screen and (min-width: $breakpoint-desktop) {
+  .card--ds-metric {
+    min-height: 241px;
+  }
+  
+  .card--ds-create-list {
+    min-height: 455px;
+  }
 }
