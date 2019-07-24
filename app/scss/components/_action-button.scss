@@ -1,0 +1,45 @@
+.action-button {
+  &, > * {
+    transition: $ui-default-transition-short;
+  }
+  min-height: 100px;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: $ui-default-box-shadow;
+  background: white;
+  
+  &__label {
+    flex-grow: 1;
+    padding-left: $base-spacing-unit;
+  }
+
+  &__icon-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: -50px;
+    border-radius: 50%;
+    width: 175px;
+    height: 175px;
+    background-color: $color-red;
+  }
+
+  &__icon {
+    width: 67px;
+    margin: 0 auto;
+    margin-right: 70px;
+  }
+
+  &:hover {
+    background-color: $color-gallery;
+    text-decoration: none;
+    color: $color-mine-shaft;
+    .action-button__icon-container {
+      background-color: $color-mine-shaft;
+    }
+  }
+}
