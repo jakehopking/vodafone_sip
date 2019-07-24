@@ -6,9 +6,11 @@
   font-size: 20px;
   padding: 11px 37px;
   text-align: center;
+  transition: $ui-default-transition-short;
 
   &:hover {
     cursor: pointer;
+    text-decoration: none;
   }
 
   &--reset {
@@ -23,6 +25,7 @@
 
     &:hover {
       background-color: $color-red-berry;
+      color: white;
     }
 
     &--dark {
