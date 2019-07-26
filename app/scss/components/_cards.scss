@@ -35,6 +35,25 @@ $small-card-padding-x:                    0 ($half-spacing-unit);
   padding: $base-spacing-unit;
 }
 
+.card--col {
+  flex-flow: row wrap;
+
+  .card__col--4 {
+    flex-basis: 33.33%
+  }
+  .card__col--8 {
+    flex-basis: 66.67%
+  }
+}
+
+.card--light-blue {
+  background-color: #F3FDFF;
+}
+
+.card--border-left {
+  border-left: 1px solid rgba($color: #000000, $alpha: .05);
+}
+
   /// Card child elements
 
   // Header

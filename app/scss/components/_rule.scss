@@ -13,6 +13,10 @@
   border-bottom-width: 2px;
 }
 
+.rule--4x {
+  border-bottom-width: 4px;
+}
+
 // Dotted rules
 
 .rule--dotted {
@@ -23,6 +27,22 @@
 
 .rule--dashed {
   border-bottom-style: dashed;
+}
+
+.rule--red {
+  color: $color-red;
+}
+
+.rule--w50 {
+  width: 50px;
+}
+
+.rule--left {
+  margin-left: 0;
+}
+
+.rule--right {
+  margin-right: 0;
 }
 
 // Ornamental rules. Places a § over the rule.
