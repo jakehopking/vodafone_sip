@@ -1,0 +1,78 @@
+$input-border-color: #B2B2B2;
+
+
+.search-box {
+  position: relative;
+}
+
+.search-box-form {
+  display: flex;
+  border-radius: 5px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgba($color: #000000, $alpha: 0.1);
+
+  select,
+  button,
+  input {
+    padding: 10px;
+    font-size: 18px;
+    margin: auto;
+    cursor: pointer;
+  }
+}
+
+.search-box-form__select {
+  flex-basis: 90px;
+  position: relative;
+  display: inline-block;
+  background: #F4F4F4;
+  border: 1px solid $input-border-color;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 0px;
+
+  select {
+    position: relative;
+    background: none;
+    position: relative;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+  }
+}
+
+  input.search-box-form__input {
+    flex-grow: 1;
+    border-top: 1px solid $input-border-color;
+    border-bottom: 1px solid $input-border-color;
+    border-left: 0;
+    border-right: 0;
+    cursor: text;
+  }
+
+ 
+  button.search-box-form__button {
+    flex-basis: 120px;
+    transition: $ui-default-transition-short;
+    height: 100%;
+    background-color: $color-red;
+    color: white;
+    text-align: center;
+    border: 1px solid #B70000;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 3px;
+    &:hover {
+      background-color: $color-red-berry;
+      border-color: $color-red-berry;
+    }
+  }
